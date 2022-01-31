@@ -9,5 +9,8 @@ module.exports = {
       body: ["Caudex", "serif"],
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+    // ...
+  ],
 };

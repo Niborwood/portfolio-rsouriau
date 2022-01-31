@@ -1,22 +1,31 @@
 import Head from "next/head";
-import Image from "next/image";
+import { Fragment } from "react";
 
 // COMPONENT IMPORTS
 import NavBar from "../components/navbar";
 import Introduction from "../components/introduction";
+import AboutMe from "../components/about-me";
+import Works from "../components/works";
 
 export default function Home() {
   return (
-    <div className="font-headings text-slate-800">
-      <NavBar />
-      <main className="h-screen">
-        <div id="about" className="flex items-center justify-center h-full ">
+    <Fragment>
+      {/* Head */}
+      <Head>
+        <title>
+          Robin Souriau - Développeur web fullstack, CV &amp; Portfolio
+        </title>
+      </Head>
+
+      {/* Content */}
+      <div className="font-headings text-slate-800">
+        <NavBar />
+        <main className="h-screen">
           <Introduction />
-        </div>
-        <div className="flex items-center justify-center h-full bg-teal-600 text-white">
-          <p>Et bien le bonjour.</p>
-        </div>
-      </main>
-    </div>
+          <AboutMe />
+          <Works />
+        </main>
+      </div>
+    </Fragment>
   );
 }
