@@ -6,7 +6,6 @@ import WorkSidebar from "../../components/works/work-sidebar";
 import WorkContent from "../../components/works/work-content";
 
 export default function WorkPage({ work }) {
-  console.log(work);
   return (
     <div>
       <WorkHead
@@ -60,7 +59,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // Get the work data from the database and param
   const { workId } = params;
-  console.log(workId);
   const { data: work, error } = await supabase
     .from("works")
     .select("*")

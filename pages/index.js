@@ -9,7 +9,6 @@ import Works from "../components/works";
 import CV from "../components/cv";
 
 export default function Home({ works }) {
-  console.log(works);
   return (
     <Fragment>
       {/* Head */}
@@ -31,9 +30,8 @@ export default function Home({ works }) {
 export async function getStaticProps() {
   const { data: works, error } = await supabase
     .from("works")
-    .select("id,title,description,thumbnail,slug")
+    .select("id,title,description,thumbnail,slug,preview")
     .order("id", { ascending: true });
-  console.log(works);
 
   // Return props
   return {

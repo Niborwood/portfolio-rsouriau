@@ -123,7 +123,7 @@ export default function Slider({ items }) {
 Slider.propTypes = {
   items: propTypes.arrayOf(
     propTypes.shape({
-      _id: propTypes.string.isRequired,
+      id: propTypes.string.isRequired,
       title: propTypes.string.isRequired,
       description: propTypes.string.isRequired,
       image: propTypes.string.isRequired,
