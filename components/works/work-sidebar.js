@@ -6,9 +6,9 @@ export default function WorkSidebar({ techs, demoLink, githubLink }) {
   const stack = techs.map((tech) => (
     <span
       className="flex px-4 py-2 text-sm font-semibold text-center rounded-full text-slate-500 bg-slate-200 w-max"
-      key={tech}
+      key={tech.id}
     >
-      {tech}
+      {tech.name}
     </span>
   ));
 
@@ -42,7 +42,12 @@ export default function WorkSidebar({ techs, demoLink, githubLink }) {
 }
 
 WorkSidebar.propTypes = {
-  techs: propTypes.arrayOf(propTypes.string).isRequired,
+  techs: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.number,
+      name: propTypes.string,
+    })
+  ).isRequired,
   demoLink: propTypes.string,
   githubLink: propTypes.string.isRequired,
 };

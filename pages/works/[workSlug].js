@@ -18,15 +18,7 @@ export default function WorkPage({ work }) {
 
       <div className="flex flex-col gap-8 sm:flex-row">
         <WorkSidebar
-          techs={[
-            "React",
-            "NextJS",
-            "Vercel",
-            "MongoDB",
-            "Next-auth",
-            "Firebase Storage",
-            "MUI",
-          ]}
+          techs={work.tags}
           demoLink={work.demoLink}
           githubLink={work.githubLink}
         />
@@ -44,12 +36,17 @@ export default function WorkPage({ work }) {
 }
 
 export async function getStaticPaths() {
-  const { data: works, error } = await supabase.from("works").select("slug");
+  // Get only works that aren't previews
+  const { data: works, error } = await supabase
+    .from("works")
+    .select("slug")
+    .eq("preview", false);
   const worksPaths = works.map((work) => ({
     params: {
-      workId: work.slug,
+      workSlug: work.slug,
     },
   }));
+
   return {
     paths: worksPaths,
     fallback: false,
@@ -58,11 +55,14 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   // Get the work data from the database and param
-  const { workId } = params;
+  const { workSlug } = params;
   const { data: work, error } = await supabase
     .from("works")
-    .select("*")
-    .eq("slug", workId)
+    .select(
+      `*,
+    tags (id,name)`
+    )
+    .eq("slug", workSlug)
     .limit(1)
     .single();
 

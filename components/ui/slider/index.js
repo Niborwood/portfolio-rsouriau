@@ -111,7 +111,7 @@ export default function Slider({ items }) {
         </button>
       </div>
       <div
-        className={`flex flex-row max-w-full gap-4 overflow-x-auto snap-mandatory snap-x pb-4`}
+        className={`flex flex-row max-w-full gap-4 overflow-x-auto snap-mandatory snap-x pb-8 scrollbar scrollbar-thumb-teal-600 scrollbar-track-slate-300`}
         ref={sliderRef}
       >
         {slides}
