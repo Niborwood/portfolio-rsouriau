@@ -26,7 +26,7 @@ export default function Slide({
           />
         ) : (
           <Link href={`/works/${slug}`} passHref>
-            <a>
+            <a className="relative block w-full h-full">
               <Image
                 src={thumbnail}
                 alt={title}

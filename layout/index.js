@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <Fragment>
       <NavBar />
-      <main className="h-screen">{children}</main>
+      <main>{children}</main>
     </Fragment>
   );
 }

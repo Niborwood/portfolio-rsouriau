@@ -4,8 +4,11 @@ import { supabase } from "../../utils/supabase-client";
 import WorkHead from "../../components/works/work-head";
 import WorkSidebar from "../../components/works/work-sidebar";
 import WorkContent from "../../components/works/work-content";
+import Error from "../../components/ui/error";
 
-export default function WorkPage({ work }) {
+export default function WorkPage({ work, nextWorkSlug, error }) {
+  if (error) return <Error message={error} />;
+
   return (
     <div>
       <WorkHead
@@ -29,6 +32,7 @@ export default function WorkPage({ work }) {
           context={work.context}
           work={work.work}
           images={work.images}
+          nextWorkSlug={nextWorkSlug}
         />
       </div>
     </div>
@@ -56,20 +60,47 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // Get the work data from the database and param
   const { workSlug } = params;
-  const { data: work, error } = await supabase
-    .from("works")
-    .select(
-      `*,
-    tags (id,name)`
-    )
-    .eq("slug", workSlug)
-    .limit(1)
-    .single();
+  let work = null;
+  let workError = null;
+  let nextWorkSlug = null;
 
-  // Return props
+  try {
+    const { data, error } = await supabase
+      .from("works")
+      .select(
+        `*,
+      tags (id,name)`
+      )
+      .eq("slug", workSlug)
+      .limit(1)
+      .single();
+    work = data;
+
+    if (error) throw new Error(error);
+
+    // Get the next work data from the database
+    const { data: nextWork } = await supabase
+      .from("works")
+      .select("slug")
+      .gt("id", work.id)
+      .eq("preview", false)
+      .limit(1)
+      .single();
+
+    nextWorkSlug = nextWork;
+  } catch (error) {
+    workError = error.message;
+  }
+
+  // Return props. If there's no next work, return "roundnet-france" slug by default
   return {
     props: {
       work,
+      nextWorkSlug: nextWorkSlug
+        ? `/works/${nextWorkSlug.slug}`
+        : "/works/roundnet-france",
+      error: workError,
     },
+    revalidate: 86400,
   };
 }

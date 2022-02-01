@@ -60,7 +60,7 @@ export default function Slider({ items }) {
   }
 
   // For each item a slide
-  const slides = items?.map((item) => <Slide key={item._id} {...item} />);
+  const slides = items?.map((item) => <Slide key={item.id} {...item} />);
 
   return (
     <div>
@@ -123,10 +123,10 @@ export default function Slider({ items }) {
 Slider.propTypes = {
   items: propTypes.arrayOf(
     propTypes.shape({
-      id: propTypes.string.isRequired,
+      id: propTypes.number.isRequired,
       title: propTypes.string.isRequired,
       description: propTypes.string.isRequired,
-      image: propTypes.string.isRequired,
+      image: propTypes.string,
     })
   ),
 };
