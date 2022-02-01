@@ -12,7 +12,7 @@ export default function Slide({
   return (
     <div className="flex-grow-0 flex-shrink-0 w-full snap-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
       <div
-        className={`relative w-full transition-all duration-300 border-l-8 ${
+        className={`relative rounded-lg w-full transition-all duration-300 border-l-8 ${
           preview ? "border-slate-600" : "border-teal-600"
         } aspect-square hover:drop-shadow-lg`}
       >
@@ -22,7 +22,7 @@ export default function Slide({
             alt={title}
             title={title}
             layout="fill"
-            className="block object-cover grayscale"
+            className="block object-cover rounded-r-lg grayscale"
           />
         ) : (
           <Link href={`/works/${slug}`} passHref>
@@ -32,7 +32,7 @@ export default function Slide({
                 alt={title}
                 title={title}
                 layout="fill"
-                className="block object-cover transition-all duration-300 grayscale hover:grayscale-0"
+                className="block object-cover transition-all duration-300 rounded-r-lg grayscale hover:grayscale-0"
               />
             </a>
           </Link>
