@@ -9,7 +9,11 @@ export default function WorkPage({ work }) {
   console.log(work);
   return (
     <div>
-      <WorkHead title={work.title} description={work.description} />
+      <WorkHead
+        title={work.title}
+        description={work.description}
+        image={work.thumbnail}
+      />
 
       <hr className="border-dashed sm:my-8 border-slate-300" />
 
@@ -33,26 +37,22 @@ export default function WorkPage({ work }) {
         <WorkContent
           context={work.context}
           work={work.work}
-          images={[
-            "/images/misc/placeholder.jpg",
-            "/images/works/spiderman.jpg",
-          ]}
+          images={work.images}
         />
       </div>
     </div>
   );
 }
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
+  const { data: works, error } = await supabase.from("works").select("slug");
+  const worksPaths = works.map((work) => ({
+    params: {
+      workId: work.slug,
+    },
+  }));
   return {
-    paths: [
-      { params: { workId: "1" } },
-      { params: { workId: "2" } },
-      { params: { workId: "3" } },
-      { params: { workId: "4" } },
-      { params: { workId: "5" } },
-      { params: { workId: "6" } },
-    ],
+    paths: worksPaths,
     fallback: false,
   };
 }
@@ -60,10 +60,12 @@ export function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // Get the work data from the database and param
   const { workId } = params;
+  console.log(workId);
   const { data: work, error } = await supabase
     .from("works")
     .select("*")
-    .eq("id", workId)
+    .eq("slug", workId)
+    .limit(1)
     .single();
 
   // Return props

@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Slide({ _id, title, description, image }) {
+export default function Slide({ id, title, description, thumbnail, slug }) {
   return (
     <div className="flex-grow-0 flex-shrink-0 w-full snap-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
       <div className="relative w-full transition-all duration-300 border-l-8 border-teal-600 aspect-square hover:drop-shadow-lg">
-        <Link href={`/works/${_id}`} passHref>
+        <Link href={`/works/${slug}`} passHref>
           <a>
             <Image
-              src={image}
+              src={thumbnail}
               alt={title}
               title={title}
               layout="fill"
@@ -19,7 +19,7 @@ export default function Slide({ _id, title, description, image }) {
       </div>
 
       <h3>
-        <Link href={`/works/${_id}`} passHref>
+        <Link href={`/works/${slug}`} passHref>
           <a className="inline-flex items-center gap-2 mt-2 mb-1 text-2xl text-teal-600 capitalize hover:underline underline-offset-2">
             {title}{" "}
             <svg

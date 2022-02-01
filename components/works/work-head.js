@@ -13,8 +13,8 @@ export default function WorkHead({ title, description, image }) {
         <div className="relative w-full sm:w-96 aspect-square drop-shadow-md">
           <Image
             src={image}
-            alt="Project title"
-            title="Project title"
+            alt={title}
+            title={title}
             layout="fill"
             className="object-cover rounded-lg"
           />

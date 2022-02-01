@@ -60,7 +60,7 @@ export default function Slider({ items }) {
   }
 
   // For each item a slide
-  const slides = items.map((item) => <Slide key={item._id} {...item} />);
+  const slides = items?.map((item) => <Slide key={item._id} {...item} />);
 
   return (
     <div>
