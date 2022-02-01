@@ -2,7 +2,6 @@ import Head from "next/head";
 import { Fragment } from "react";
 
 // COMPONENT IMPORTS
-import NavBar from "../components/navbar";
 import Introduction from "../components/introduction";
 import AboutMe from "../components/about-me";
 import Works from "../components/works";
