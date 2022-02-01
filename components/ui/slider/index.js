@@ -1,6 +1,5 @@
 import Slide from "./slide";
 import propTypes from "prop-types";
-import style from "./slider.module.css";
 import { useState, useRef, useEffect } from "react";
 
 export default function Slider({ items }) {
@@ -65,7 +64,7 @@ export default function Slider({ items }) {
 
   return (
     <div>
-      <div aria-label="Slider navigation" className={style.noscrollbar}>
+      <div aria-label="Slider navigation">
         {/* LEFT ARROW */}
         <button
           className={!scrollLeft ? "text-slate-400" : "text-teal-600"}
@@ -112,7 +111,7 @@ export default function Slider({ items }) {
         </button>
       </div>
       <div
-        className={`flex flex-row max-w-full gap-4 overflow-x-auto snap-mandatory snap-x`}
+        className={`flex flex-row max-w-full gap-4 overflow-x-auto snap-mandatory snap-x pb-4`}
         ref={sliderRef}
       >
         {slides}

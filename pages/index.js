@@ -6,6 +6,7 @@ import NavBar from "../components/navbar";
 import Introduction from "../components/introduction";
 import AboutMe from "../components/about-me";
 import Works from "../components/works";
+import CV from "../components/cv";
 
 export default function Home() {
   return (
@@ -18,14 +19,10 @@ export default function Home() {
       </Head>
 
       {/* Content */}
-      <div className="font-headings text-slate-800">
-        <NavBar />
-        <main className="h-screen">
-          <Introduction />
-          <AboutMe />
-          <Works />
-        </main>
-      </div>
+      <Introduction />
+      <AboutMe />
+      <Works />
+      <CV />
     </Fragment>
   );
 }

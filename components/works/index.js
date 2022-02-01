@@ -1,4 +1,5 @@
 import Slider from "../ui/slider";
+import Divider from "../ui/divider";
 
 const works = [
   {
@@ -29,12 +30,29 @@ const works = [
       "Horror Footage Findr is a React project that displays a list of horror movies.",
     image: "/images/works/vhs.jpg",
   },
+  {
+    _id: "5",
+    title: "RATP Trafic",
+    description:
+      "RATP Trafic is a React project that displays a list of RATP traffic.",
+    image: "/images/works/ratp.jpg",
+  },
+  {
+    _id: "6",
+    title: "Portfolio",
+    description:
+      "This is my portfolio. It is a React/NextJS project that displays a list of my skills.",
+    image: "/images/works/spiderman.jpg",
+  },
 ];
 
 export default function Works() {
   return (
     <div id="works" className="px-8 py-12 lg:p-24">
-      <h2 className="mb-12 text-7xl text-slate-800">Works</h2>
+      <h2 className="mb-12 text-7xl text-slate-800">
+        <Divider />
+        Works
+      </h2>
       <Slider items={works} />
     </div>
   );

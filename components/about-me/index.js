@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <div className="flex flex-col justify-between min-h-full gap-8 px-8 py-24 bg-teal-600 lg:p-24 lg:flex-row">
+    <div className="flex flex-col justify-between min-h-full gap-8 px-8 py-24 bg-gradient-to-bl from-teal-700 to-teal-500 lg:p-24 lg:flex-row">
       <div className="flex text-4xl sm:w-2/3 xl:w-1/3 xl:items-end">
         <p className="pt-4 border-t-4 border-white xl:w-2/3 text-slate-100">
           Je vois le développement comme un travail manuel : un atelier, des
