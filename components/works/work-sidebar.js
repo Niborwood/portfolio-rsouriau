@@ -1,17 +1,10 @@
-import Link from "../../components/ui/link";
 import propTypes from "prop-types";
 
-export default function WorkSidebar({ techs, demoLink, githubLink }) {
-  // Each tech is a chip, forming a stack
-  const stack = techs.map((tech) => (
-    <span
-      className="flex px-4 py-2 text-sm font-semibold text-center rounded-full text-slate-500 bg-slate-200 w-max"
-      key={tech.id}
-    >
-      {tech.name}
-    </span>
-  ));
+// COMPONENT IMPORTS
+import Link from "../../components/ui/link";
+import TagCloud from "../../components/ui/tag-cloud";
 
+export default function WorkSidebar({ techs, demoLink, githubLink }) {
   return (
     <div className="p-8 mt-16 mb-8 sm:w-1/4 sm:pt-0 sm:mt-12 lg:p-24 lg:pt-12">
       {/* TECHS */}
@@ -19,7 +12,7 @@ export default function WorkSidebar({ techs, demoLink, githubLink }) {
         <h4 className="pl-1 text-xl uppercase text-slate-400">
           Technologies utilisées
         </h4>
-        <div className="flex flex-wrap gap-2 mt-2">{stack}</div>
+        <TagCloud tags={techs} />
       </div>
 
       {/* DEMOLINK */}
