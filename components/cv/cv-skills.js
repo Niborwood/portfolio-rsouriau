@@ -1,3 +1,7 @@
+// COMPONENT IMPORTS
+import TagCloud from "../ui/tag-cloud";
+import Link from "../ui/link";
+
 const interests = [
   {
     name: "Président puis membre de l'association Roundnet Paris, promouvant le roundnet en Ile de France",
@@ -28,18 +32,16 @@ const interests = [
   },
 ];
 
-// COMPONENT IMPORTS
-import TagCloud from "../ui/tag-cloud";
-import Link from "../ui/link";
-
 export default function CVSkills({ tags }) {
   const interestsList = interests.map((interest) => (
     <div
-      className="flex flex-row justify-between lg:flex-col xl:flex-row"
+      className="flex flex-col justify-between xs:flex-row lg:flex-col xl:flex-row sm:w-3/4 lg:w-full"
       key={interest.name}
     >
-      <p className="w-2/5 lg:w-full xl:w-2/5 text-slate-400">{interest.date}</p>
-      <div className="w-3/5 lg:w-full xl:w-3/5">
+      <p className="w-full xs:w-2/3 lg:w-full xl:w-2/5 text-slate-400">
+        {interest.date}
+      </p>
+      <div className="w-full xs:w-3/5 lg:w-full xl:w-3/5">
         <p>{interest.name}</p>
       </div>
     </div>

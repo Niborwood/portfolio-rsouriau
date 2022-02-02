@@ -6,7 +6,7 @@ export default function CVHead() {
   return (
     <div className="px-8 py-8 mx-auto lg:w-1/3 lg:p-12 xl:p-18 xl:pl-24 lg:py-0">
       {/* Image */}
-      <div className="relative p-1 mb-8 rounded-full drop-shadow-md bg-teal-600/20 w-80 aspect-square fit-cover shadow-teal-600/10">
+      <div className="relative max-w-xs p-1 mb-8 rounded-full drop-shadow-md bg-teal-600/20 aspect-square fit-cover shadow-teal-600/10">
         <div className="relative w-full h-full rounded-full bg-teal-600/40 right-5 bottom-1">
           <Image
             src="/images/cv/robin-souriau-developpeur-fullstack-removebg.png"

@@ -40,7 +40,8 @@ export default function Link({ href, className, iconType, children }) {
   return (
     <NextLink href={href} passHref>
       <a
-        className={`text-teal-600 inline-flex items-center gap-1 hover:underline underline-offset-4 ${className}`}
+        className={`text-teal-600 inline-flex decoration-dashed
+ items-center gap-1 hover:underline underline-offset-4 ${className}`}
         target={isExternal ? "_blank" : null}
         rel={isExternal ? "noopener noreferrer" : null}
       >
