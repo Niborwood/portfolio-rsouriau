@@ -53,7 +53,7 @@ const menuElements = [
 ];
 
 export default function NavBar() {
-  const navElements = menuElements.map((element, index) => (
+  const navElements = menuElements.map((element) => (
     <Fragment key={element.href}>
       <li className="">
         <Link href={`/#${element.href}`} light>
