@@ -1,6 +1,6 @@
 import NextLink from "next/link";
 
-export default function Link({ href, className, iconType, children }) {
+export default function Link({ href, className, iconType, children, light }) {
   const isExternal = href.startsWith("http");
 
   // Handle icon
@@ -40,7 +40,11 @@ export default function Link({ href, className, iconType, children }) {
   return (
     <NextLink href={href} passHref>
       <a
-        className={`text-teal-600 inline-flex decoration-dashed
+        className={`${
+          light
+            ? "text-slate-100 decoration-slate-100/20 underline hover:decoration-slate-100"
+            : "text-teal-600 decoration-teal-600/20 underline hover:decoration-teal-600"
+        } transition-all ease-in-out inline-flex decoration-dashed 
  items-center gap-1 hover:underline underline-offset-4 ${className}`}
         target={isExternal ? "_blank" : null}
         rel={isExternal ? "noopener noreferrer" : null}
