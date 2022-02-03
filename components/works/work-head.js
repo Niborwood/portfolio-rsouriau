@@ -3,7 +3,7 @@ import propTypes from "prop-types";
 
 export default function WorkHead({ title, description, image }) {
   return (
-    <div className="w-full px-8 py-24 lg:p-24">
+    <div className="w-full px-8 pt-24 pb-12 lg:p-24 lg:pb-24 lg:pt-36">
       <div className="flex flex-col justify-center gap-8 sm:flex-row">
         <div className="sm:w-96">
           <h4 className="pl-1 uppercase sm:text-xl text-slate-400">Projet</h4>

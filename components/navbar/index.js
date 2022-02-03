@@ -59,7 +59,7 @@ export default function NavBar() {
         <span className="inline-flex items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-7 h-7"
+            className="w-6 h-6 xs:w-7 xs:h-7"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -73,9 +73,10 @@ export default function NavBar() {
 
   return (
     <nav className="fixed z-30 flex flex-row items-center justify-between w-full px-4 py-6 border-b-4 border-white bg-gradient-to-br from-teal-700/75 to-teal-500/75 lg:p-8 text-slate-100 backdrop-blur-md">
-      <h1 className="text-xl xs:text-2xl">
+      <h1 className="xs:text-xl sm:text-2xl">
         <Link href="/" light>
-          Robin Souriau
+          <span className="hidden xs:block">Robin Souriau</span>
+          <span className="xs:hidden">R. Souriau</span>
         </Link>
       </h1>
       <ul className="flex items-center justify-center gap-1 xs:gap-2 sm:gap-4">

@@ -25,7 +25,11 @@ export default function AboutMe() {
           </p>
           <p>
             Après un retour au source et une formidable formation de 6 mois chez
-            O&apos;Clock, me voilà donc enfin officiellement développeur web.{" "}
+            O&apos;Clock et le{" "}
+            <strong>Titre Pro Développeur web et mobile</strong> obtenu, me
+            voilà donc enfin officiellement développeur web JavaScript.
+          </p>
+          <p>
             <strong>Fullstack</strong> parce que j&apos;aime toucher à tout, de
             la carrosserie au capot, parce que des lignes de code, qu&apos;elles
             soient exécutées côté client ou côté serveur, cela reste des lignes
