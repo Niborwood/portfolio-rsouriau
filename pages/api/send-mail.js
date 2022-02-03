@@ -6,8 +6,34 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { data } = req.body;
+    const data = req.body;
 
+    if (!data)
+      return res.status(400).json({ message: "Aucune donnée fournie" });
+
+    // * Data Validation
+    // Trim all values and check if all fields are filled
+    if (
+      !data.name ||
+      !data.email ||
+      !data.message ||
+      data.name.trim() === "" ||
+      data.email.trim() === "" ||
+      data.message.trim() === ""
+    ) {
+      res.status(400).json({ message: "Merci de remplir tous les champs" });
+      return;
+    }
+
+    // Check if email is valid
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      res
+        .status(400)
+        .json({ message: "Merci de saisir une adresse email valide" });
+      return;
+    }
+
+    // * Send email
     // Create email template
     const html = emailTeplate(data);
 
@@ -15,7 +41,7 @@ export default async function handler(req, res) {
     const msg = {
       to: "robin.souriau@gmail.com",
       from: "robin.souriau@gmail.com",
-      subject: `Contact via le site - ${data.subject}`,
+      subject: "Contact via le portfolio",
       name: data.name,
       html,
     };
@@ -24,7 +50,7 @@ export default async function handler(req, res) {
       await sgMail.send(msg);
       res.status(200).json({
         success: true,
-        message: `Votre email a été envoyé ! Nous vous répondrons sous peu.`,
+        message: `Votre email a été envoyé ! Je vous répondrai sous peu.`,
       });
     } catch (error) {
       res.status(500).json({
