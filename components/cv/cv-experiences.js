@@ -18,6 +18,10 @@ const experiences = [
 const formations = [
   {
     date: "2021",
+    title: "Titre Professionnel - Développeur web et mobile",
+  },
+  {
+    date: "2021",
     title: "Formation fullstack JS/React",
     details: "O'Clock",
   },

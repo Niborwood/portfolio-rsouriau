@@ -2,6 +2,7 @@ import NextLink from "next/link";
 
 export default function Link({
   href,
+  title,
   className,
   iconType,
   children,
@@ -57,6 +58,7 @@ export default function Link({
  items-center gap-1 hover:underline underline-offset-4 ${className}`}
         target={isExternal ? "_blank" : null}
         rel={isExternal ? "noopener noreferrer" : null}
+        title={title}
       >
         {icon}
         {children}
