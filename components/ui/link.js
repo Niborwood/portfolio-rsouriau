@@ -1,11 +1,18 @@
 import NextLink from "next/link";
 
-export default function Link({ href, className, iconType, children, light }) {
+export default function Link({
+  href,
+  className,
+  iconType,
+  children,
+  light,
+  noSvg,
+}) {
   const isExternal = href.startsWith("http");
 
   // Handle icon
   let icon;
-  if (isExternal) {
+  if (isExternal && !noSvg) {
     icon = (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +51,9 @@ export default function Link({ href, className, iconType, children, light }) {
           light
             ? "text-slate-100 decoration-slate-100/20 underline hover:decoration-slate-100"
             : "text-teal-600 decoration-teal-600/20 underline hover:decoration-teal-600"
-        } transition-all ease-in-out inline-flex decoration-dashed 
+        } transition-all ease-in-out ${
+          noSvg || "inline-flex"
+        } decoration-dashed 
  items-center gap-1 hover:underline underline-offset-4 ${className}`}
         target={isExternal ? "_blank" : null}
         rel={isExternal ? "noopener noreferrer" : null}
