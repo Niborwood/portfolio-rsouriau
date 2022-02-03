@@ -56,9 +56,9 @@ export default function AboutMe() {
             <strong>polyvalence</strong> et l&apos;adaptation et une envie de
             construire, toujours à plusieurs, des outils et des services utiles
             et performants.
-            <p>
-              A la prochaine <strong>aventure</strong> !
-            </p>
+          </p>
+          <p>
+            A la prochaine <strong>aventure</strong> !
           </p>
         </div>
       </div>

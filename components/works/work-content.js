@@ -18,6 +18,11 @@ export default function WorkContent({ context, work, images, nextWorkSlug }) {
                 {children}
               </Link>
             ),
+            code: ({ children }) => (
+              <code className="px-2 py-1.5 text-sm bg-gray-200 rounded-md m-0.5">
+                {children}
+              </code>
+            ),
           }}
         >
           {context}
