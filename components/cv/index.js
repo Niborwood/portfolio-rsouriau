@@ -8,7 +8,7 @@ export default function CV({ tags }) {
   return (
     <div id="cv" className="mb-24">
       {/* TITLE */}
-      <div className="px-8 py-12 lg:p-24">
+      <div className="px-8 lg:p-24">
         <SectionTitle title="C.V." />
       </div>
 

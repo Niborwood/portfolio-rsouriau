@@ -54,33 +54,33 @@ const menuElements = [
 
 export default function NavBar() {
   const navElements = menuElements.map((element) => (
-    <Fragment key={element.href}>
-      <li className="">
-        <Link href={`/#${element.href}`} light>
-          <span className="inline-flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-7 h-7"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              {element.svg}
-            </svg>
-            <span className="hidden md:inline">{element.name}</span>
-          </span>
-        </Link>
-      </li>
-    </Fragment>
+    <li key={element.href}>
+      <Link href={`/#${element.href}`} light>
+        <span className="inline-flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-7 h-7"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            {element.svg}
+          </svg>
+          <span className="hidden md:inline">{element.name}</span>
+        </span>
+      </Link>
+    </li>
   ));
 
   return (
-    <nav className="fixed z-50 flex flex-row items-center justify-between w-full px-4 py-8 border-b-4 border-white bg-gradient-to-br from-teal-700/75 to-teal-500/75 lg:p-8 text-slate-100 backdrop-blur-md">
-      <h1 className="text-2xl">
+    <nav className="fixed z-30 flex flex-row items-center justify-between w-full px-4 py-6 border-b-4 border-white bg-gradient-to-br from-teal-700/75 to-teal-500/75 lg:p-8 text-slate-100 backdrop-blur-md">
+      <h1 className="text-xl xs:text-2xl">
         <Link href="/" light>
           Robin Souriau
         </Link>
       </h1>
-      <ul className="flex items-center justify-center gap-4">{navElements}</ul>
+      <ul className="flex items-center justify-center gap-1 xs:gap-2 sm:gap-4">
+        {navElements}
+      </ul>
     </nav>
   );
 }

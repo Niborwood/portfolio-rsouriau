@@ -6,9 +6,9 @@ export default function WorkHead({ title, description, image }) {
     <div className="w-full px-8 py-24 lg:p-24">
       <div className="flex flex-col justify-center gap-8 sm:flex-row">
         <div className="sm:w-96">
-          <h4 className="pl-1 text-xl uppercase text-slate-400">Projet</h4>
-          <h2 className="mb-4 text-teal-600 text-7xl">{title}</h2>
-          <p className="text-xl">{description}</p>
+          <h4 className="pl-1 uppercase sm:text-xl text-slate-400">Projet</h4>
+          <h2 className="mb-4 text-5xl text-teal-600 sm:text-7xl">{title}</h2>
+          <p className="text-lg lg:text-xl">{description}</p>
         </div>
         <div className="relative w-full sm:w-96 aspect-square drop-shadow-md">
           <Image

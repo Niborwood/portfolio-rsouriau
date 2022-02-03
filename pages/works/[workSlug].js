@@ -10,7 +10,7 @@ export default function WorkPage({ work, nextWorkSlug, error }) {
   if (error) return <Error message={error} />;
 
   return (
-    <div>
+    <div className="py-8">
       <WorkHead
         title={work.title}
         description={work.description}
