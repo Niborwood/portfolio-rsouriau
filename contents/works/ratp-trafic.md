@@ -15,8 +15,8 @@ Dans l'esprit d'apprendre avec un petit projet, alors que je commençais à atta
 
 S'il a suffi à Dieu de six jours pour créer l'Homme, le ciel et la Terre, il m'en aura fallu un peu plus pour maîtriser ces quatre propositions.
 
-#### Middleware nv. 51
+#### Les fondamentaux de React en un petit projet
 
-Le code de PokeReact est largement imparfait, voire peu fiable à de nombreux endroits. Pour autant, il m'a semblé être pertinent de le mettre ici tant il m'a permis de comprendre l'essence de Redux, et notamment l'utilisation de ces middlewares. Leur appel n'était pas lié à des API, mais plutôt à des `setTimeout()` permettant de gérer les délais d'éxecution des actions.
+Là encore, RATP Trafic a surtout servi de terrain d'expérimentation pour m'initier à React. J'ai pu y comprendre les rouages fondamentaux des composants, des états et de leur influence sur le DOM, mais également de la gestion des données asynchrones et des inputs utilisateurs.
 
-Il m'a également permis de comprendre une première logique d'écriture d'architecture de composants, par l'erreur, puisque leur rangement dans ce projet était plus que chaotique, dû à une mauvaise décision initiale : ranger les composants par ordre alphabétique. C'est en tombant qu'on se relève le mieux, non ?
+Regardant à nouveau le code de ce projet, le fouillis me prêt à une douce nostalgie. Il me fait également prendre conscience qu'un framework ne se maîtrise jamais vraiment mais s'apprend en continu : comme j'étais certain de comprendre _intrinsèquement_ React au moment de mon dernier push, que suis certain le comprendre _intrinsèquement_ à nouveau aujourd'hui, je regarderai mes compétences aujourd'hui à l'aube de celles de demain avec la certitude d'avoir toujours quelque chose à apprendre.
