@@ -46,6 +46,11 @@ export default function ContactForm() {
 
     // Set submit message, than clear it after 5s
     setFormMessage(data.message);
+    setValues({
+      name: "",
+      email: "",
+      message: "",
+    });
     setTimeout(() => {
       setFormMessage("");
     }, 5000);
