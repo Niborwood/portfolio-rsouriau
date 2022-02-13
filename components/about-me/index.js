@@ -6,14 +6,16 @@ export default function AboutMe() {
     <BackgroundGradient id="about">
       <div className="flex flex-col justify-between min-h-screen gap-8 px-8 py-24 lg:flex-row lg:p-24">
         <div className="flex text-3xl sm:text-4xl sm:w-2/3 xl:w-1/3 xl:items-end">
-          <p className="pt-4 border-t-4 border-white xl:w-2/3">
+          <p className="pt-4 border-t-4 border-white dark:border-slate-300/70 xl:w-2/3">
             Je vois le développement comme un travail manuel : un atelier, des
             outils, la faculté un peu{" "}
-            <strong className="text-slate-800">magique</strong> de pouvoir
-            potentiellement tout construire.
+            <strong className="text-slate-800 dark:text-slate-50">
+              magique
+            </strong>{" "}
+            de pouvoir potentiellement tout construire.
           </p>
         </div>
-        <div className="prose sm:columns-2 xl:w-1/2 xl:columns-2 prose-p:text-slate-100 prose-strong:text-slate-800">
+        <div className="prose sm:columns-2 xl:w-1/2 xl:columns-2 prose-p:text-slate-100 dark:prose-p:text-slate-300/60 prose-strong:text-slate-800 dark:prose-strong:text-slate-100">
           <p>
             Il aura fallu quasiment 10 ans pour boucler la boucle. Depuis les
             premiers tutos HTML/CSS jusqu&apos;à ce portfolio, il s&apos;est

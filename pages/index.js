@@ -7,7 +7,6 @@ import Introduction from "../components/introduction";
 import AboutMe from "../components/about-me";
 import Works from "../components/works";
 import CV from "../components/cv";
-import Contact from "../components/contact";
 
 export default function Home({ works, tags }) {
   return (

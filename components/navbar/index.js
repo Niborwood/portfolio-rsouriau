@@ -110,7 +110,7 @@ export default function NavBar() {
   ));
 
   return (
-    <nav className="fixed z-30 flex flex-row items-center justify-between w-full px-4 py-6 border-b-4 border-white bg-gradient-to-br from-teal-700/75 to-teal-500/75 lg:p-8 text-slate-100 backdrop-blur-md">
+    <nav className="fixed z-30 flex flex-row items-center justify-between w-full px-4 py-6 border-b-4 border-white dark:border-slate-900 bg-gradient-to-br from-teal-700/75 dark:from-teal-900/75 to-teal-500/75 dark:to-teal-800/75 lg:p-8 text-slate-100 dark:text-slate-300 backdrop-blur-md">
       <h1 className="xs:text-xl sm:text-2xl">
         <Link href="/" light>
           <span className="hidden xs:block">Robin Souriau</span>

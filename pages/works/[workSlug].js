@@ -69,7 +69,7 @@ export async function getStaticProps({ params }) {
       .from("works")
       .select(
         `*,
-      tags (id,name)`
+      tags (id,name,favorite)`
       )
       .eq("slug", workSlug)
       .limit(1)
