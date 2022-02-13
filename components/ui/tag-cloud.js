@@ -4,7 +4,11 @@ export default function TagCloud({ tags }) {
   // Each tag becomes a chip
   const tagCloud = tags.map((tag) => (
     <span
-      className="flex px-4 py-2 text-sm font-semibold text-center rounded-full text-slate-500 bg-slate-200 w-max"
+      className={`flex px-4 py-2 text-sm font-semibold text-center rounded-full ${
+        tag.favorite
+          ? "bg-teal-600 text-slate-50"
+          : "bg-slate-200 text-slate-500"
+      } w-max`}
       key={tag.id}
     >
       {tag.name}

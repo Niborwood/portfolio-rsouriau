@@ -39,7 +39,7 @@ export async function getStaticProps() {
   // Get tags for tag cloud display
   const { data: tags, error: errorTags } = await supabase
     .from("tags")
-    .select("id,name")
+    .select("id,name,favorite")
     .order("name", { ascending: true });
 
   // Return props
