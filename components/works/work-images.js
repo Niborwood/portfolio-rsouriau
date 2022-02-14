@@ -26,7 +26,7 @@ export default function WorkImages({ images }) {
             title="Project title"
             width="600"
             height="400"
-            className="object-cover rounded-lg cursor-pointer"
+            className="object-cover rounded-lg cursor-pointer dark:brightness-75"
             onClick={() => openModal(image)}
           />
         </div>

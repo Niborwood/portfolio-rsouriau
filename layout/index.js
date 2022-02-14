@@ -8,7 +8,9 @@ export default function Layout({ children }) {
   return (
     <Fragment>
       <NavBar />
-      <main className="dark:bg-slate-900 dark:text-slate-300">{children}</main>
+      <main className="h-full dark:bg-slate-900 dark:text-slate-300">
+        {children}
+      </main>
       <Contact />
     </Fragment>
   );

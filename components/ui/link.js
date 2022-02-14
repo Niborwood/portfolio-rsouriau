@@ -50,7 +50,7 @@ export default function Link({
       <a
         className={`${
           light
-            ? "text-slate-100 decoration-slate-100/20 underline hover:decoration-slate-100"
+            ? "text-slate-100 dark:text-slate-300 decoration-slate-100/20 underline hover:decoration-slate-100"
             : "text-teal-600 decoration-teal-600/20 underline hover:decoration-teal-600"
         } transition-all ease-in-out ${
           noSvg || "inline-flex"

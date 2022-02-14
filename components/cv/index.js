@@ -6,7 +6,7 @@ import SectionTitle from "../ui/section-title";
 
 export default function CV({ tags }) {
   return (
-    <div id="cv" className="mb-24">
+    <div id="cv" className="pb-24">
       {/* TITLE */}
       <div className="px-8 lg:p-24">
         <SectionTitle title="C.V." />

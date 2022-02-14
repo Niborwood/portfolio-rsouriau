@@ -8,7 +8,7 @@ import AboutMe from "../components/about-me";
 import Works from "../components/works";
 import CV from "../components/cv";
 
-export default function Home({ works, tags }) {
+export default function Home({ works, tags, error, errorTags }) {
   return (
     <Fragment>
       {/* Head */}
@@ -21,9 +21,8 @@ export default function Home({ works, tags }) {
       {/* Content */}
       <Introduction />
       <AboutMe />
-      <Works works={works} />
-      <CV tags={tags} />
-      {/* <Contact /> */}
+      {error ? <p>Erreur</p> : <Works works={works} />}
+      {errorTags ? <p>Erreur</p> : <CV tags={tags} />}
     </Fragment>
   );
 }

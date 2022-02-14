@@ -16,7 +16,7 @@ export default function WorkHead({ title, description, image }) {
             alt={title}
             title={title}
             layout="fill"
-            className="object-cover rounded-lg"
+            className="object-cover rounded-lg dark:brightness-75"
           />
         </div>
       </div>

@@ -6,7 +6,7 @@ export default function Introduction() {
           Hello !{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-16 h-16 text-teal-600 dark:text-teal-400 sm:w-32 sm:h-32 "
+            className="w-16 h-16 text-teal-600 dark:text-teal-600 sm:w-32 sm:h-32 "
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -20,14 +20,14 @@ export default function Introduction() {
           </svg>
         </span>
         <br /> Je m&apos;appelle{" "}
-        <span className="font-bold text-teal-600 dark:text-teal-500">
+        <span className="font-bold text-teal-600 dark:text-teal-600">
           Robin Souriau
         </span>
         .
       </h2>
       <h3 className="text-2xl md:text-3xl">
         Je suis{" "}
-        <span className="font-bold text-teal-600 dark:text-teal-500">
+        <span className="font-bold text-teal-600 dark:text-teal-600">
           développeur web fullstack
         </span>{" "}
         basé à Paris.

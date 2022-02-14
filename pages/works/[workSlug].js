@@ -17,7 +17,7 @@ export default function WorkPage({ work, nextWorkSlug, error }) {
         image={work.thumbnail}
       />
 
-      <hr className="border-dashed sm:my-8 border-slate-300" />
+      <hr className="border-dashed sm:my-8 border-slate-300 dark:border-slate-400" />
 
       <div className="flex flex-col gap-8 sm:flex-row">
         <WorkSidebar

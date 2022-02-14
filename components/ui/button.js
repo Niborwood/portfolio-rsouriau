@@ -4,10 +4,10 @@ import propTypes from "prop-types";
 import Link from "./link";
 
 export default function Button({ href, children, svg, type, light, large }) {
-  let buttonClass = `inline-block  text-sm font-medium leading-5  transition duration-150 ease-in-out border border-transparent rounded-md  focus:outline-none ${
+  let buttonClass = `inline-block  text-sm font-medium leading-5 transition duration-150 ease-in-out border border-transparent rounded-md focus:outline-none ${
     light
-      ? "bg-slate-100 hover:bg-slate-200 focus:border-slate-700 active:bg-slate-700 focus:shadow-outline-slate text-teal-600"
-      : "bg-teal-600 hover:bg-teal-500 focus:border-teal-700 active:bg-teal-700 focus:shadow-outline-teal text-slate-100"
+      ? "bg-slate-100 hover:bg-slate-200 focus:border-slate-700 active:bg-slate-700 focus:shadow-outline-slate text-teal-600 dark:bg-teal-900/80 dark:hover:bg-teal-900 dark:hover:text-slate-300 dark:text-slate-400  dark:focus:bg-teal-800 dark:focus:shadow-outline-teal"
+      : "bg-teal-600 hover:bg-teal-500 focus:border-teal-700 active:bg-teal-700 focus:shadow-outline-teal text-slate-100 dark:bg-teal-800 dark:hover:bg-teal-700"
   } ${large ? "text-xl px-6 py-3" : "text-normal px-4 py-2"}`;
 
   if (!href)

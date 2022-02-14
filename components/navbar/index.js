@@ -99,7 +99,7 @@ export default function NavBar() {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 pt-0.5 transition-all ease-in-out xs:w-7 xs:h-7 md:text-slate-200/90 hover:text-slate-200"
+          className="w-6 h-6 pt-0.5 transition-all ease-in-out xs:w-7 xs:h-7 md:text-slate-200/90 dark:md:text-slate-400/90 hover:text-slate-200"
           fill="currentColor"
           viewBox="0 0 26 26"
         >
