@@ -48,14 +48,16 @@ export default function CVExperiences() {
       className="flex flex-col justify-between xs:flex-row lg:flex-col xl:flex-row sm:w-3/4 lg:w-full"
       key={experience.title}
     >
-      <p className="w-full xs:w-2/3 lg:w-full xl:w-2/5 text-slate-400">
+      <p className="w-full xs:w-2/3 lg:w-full xl:w-2/5 text-slate-400 dark:text-slate-300">
         {experience.date}
       </p>
-      <div className="w-full xs:w-3/5 lg:w-full xl:w-3/5">
+      <div className="w-full xs:w-3/5 lg:w-full xl:w-3/5 dark:text-slate-300">
         <p>
           {experience.title} | {experience.company}
         </p>
-        <p className="text-slate-400">{experience.description}</p>
+        <p className="text-slate-400 dark:text-slate-500">
+          {experience.description}
+        </p>
       </div>
     </div>
   ));
@@ -65,12 +67,14 @@ export default function CVExperiences() {
       className="flex flex-col justify-between xs:flex-row lg:flex-col xl:flex-row sm:w-3/4 lg:w-full"
       key={formation.title}
     >
-      <p className="w-full xs:w-2/3 lg:w-full xl:w-2/5 text-slate-400">
+      <p className="w-full xs:w-2/3 lg:w-full xl:w-2/5 text-slate-400 dark:text-slate-300">
         {formation.date}
       </p>
-      <div className="w-full xs:w-3/5 lg:w-full xl:w-3/5">
+      <div className="w-full xs:w-3/5 lg:w-full xl:w-3/5 dark:text-slate-300">
         <p>{formation.title}</p>
-        <p className="text-slate-400">{formation.details}</p>
+        <p className="text-slate-400 dark:text-slate-500">
+          {formation.details}
+        </p>
       </div>
     </div>
   ));

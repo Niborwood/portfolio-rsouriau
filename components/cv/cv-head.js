@@ -21,7 +21,7 @@ export default function CVHead() {
       {/* Informations principales */}
       <h2 className="mb-8 text-4xl text-teal-600">Robin SOURIAU</h2>
       <div className="flex flex-col gap-2">
-        <p className="inline-flex items-center gap-1 text-lg text-slate-600">
+        <p className="inline-flex items-center gap-1 text-lg text-slate-600 dark:text-slate-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-6 h-6"
@@ -38,7 +38,7 @@ export default function CVHead() {
           </svg>
           06/01/1993 ({getAge("1993, 1, 6")} ans)
         </p>
-        <p className="inline-flex items-center gap-1 text-lg text-slate-600">
+        <p className="inline-flex items-center gap-1 text-lg text-slate-600 dark:text-slate-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-6 h-6"
@@ -61,7 +61,7 @@ export default function CVHead() {
           </svg>
           Paris, Seine-Saint-Denis
         </p>
-        <p className="inline-flex items-center gap-1 text-lg text-slate-600">
+        <p className="inline-flex items-center gap-1 text-lg text-slate-600 dark:text-slate-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-6 h-6"

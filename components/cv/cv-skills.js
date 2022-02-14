@@ -38,7 +38,7 @@ export default function CVSkills({ tags }) {
       className="flex flex-col justify-between xs:flex-row lg:flex-col xl:flex-row sm:w-3/4 lg:w-full"
       key={interest.name}
     >
-      <p className="w-full xs:w-2/3 lg:w-full xl:w-2/5 text-slate-400">
+      <p className="w-full xs:w-2/3 lg:w-full xl:w-2/5 text-slate-400 dark:text-slate-300">
         {interest.date}
       </p>
       <div className="w-full xs:w-3/5 lg:w-full xl:w-3/5">
@@ -52,12 +52,12 @@ export default function CVSkills({ tags }) {
       <div className="space-y-4 text-slate-500">
         <h3 className="mb-8 text-2xl text-teal-600">Compétences</h3>
         <TagCloud tags={tags} />
-        <div>
+        <div className="dark:text-slate-300">
           Envie de les voir en pratique ?{" "}
           <Link href="/#works">Découvrez mes projets.</Link>
         </div>
       </div>
-      <div className="space-y-4 text-slate-600">
+      <div className="space-y-4 text-slate-600 dark:text-slate-300">
         <h3 className="mb-8 text-2xl text-teal-600">Centres d&apos;intérêts</h3>
         {interestsList}
       </div>

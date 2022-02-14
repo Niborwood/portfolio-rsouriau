@@ -8,7 +8,7 @@ export default function SectionTitle({ title, light }) {
     <h2
       className={`px-8 pt-12 pb-0 mb-24 text-5xl sm:text-7xl text-slate-${
         light ? "100" : "800"
-      } lg:px-24 lg:py-0`}
+      } dark:text-slate-300 lg:px-24 lg:py-0`}
     >
       <Divider />
       {title}

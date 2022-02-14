@@ -39,7 +39,7 @@ export default function Slide({
         )}
       </div>
 
-      <h3 className="mt-2 mb-1 text-2xl text-slate-600">
+      <h3 className="mt-2 mb-1 text-2xl text-slate-600 dark:text-slate-300">
         {preview ? (
           title
         ) : (
@@ -66,7 +66,7 @@ export default function Slide({
           </Link>
         )}
       </h3>
-      <div className="text-slate-600">{description}</div>
+      <div className="text-slate-600 dark:text-slate-300">{description}</div>
     </div>
   );
 }

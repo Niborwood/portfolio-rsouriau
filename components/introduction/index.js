@@ -1,6 +1,6 @@
 export default function Introduction() {
   return (
-    <div className="flex flex-col justify-center h-screen p-8 lg:w-2/3 lg:p-24 text-slate-800 dark:text-slate-100 dark:bg-slate-900">
+    <div className="flex flex-col justify-center h-screen p-8 lg:w-2/3 lg:p-24 text-slate-800 dark:text-slate-300 dark:bg-slate-900">
       <h2 className="my-4 text-5xl sm:text-7xl md:text-8xl ">
         <span className="inline-flex items-center gap-4 my-2">
           Hello !{" "}
