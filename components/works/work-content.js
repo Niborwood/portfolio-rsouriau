@@ -8,7 +8,9 @@ import Link from "../ui/link";
 
 export default function WorkContent({ context, work, images, nextWorkSlug }) {
   return (
-    <div className="px-8 py-12 space-y-8 prose lg:p-24 sm:w-3/4 prose-slate prose-h3:text-3xl prose-h4:text-xl dark:prose-p:text-slate-400 dark:prose-h4:text-slate-300 dark:prose-strong:text-slate-200 dark:prose-h3:text-slate-200 dark:prose-li:text-slate-400">
+    <div
+      className="px-8 py-12 space-y-8 prose lg:p-24 sm:w-3/4 prose-slate prose-h3:text-3xl prose-h4:text-xl dark:prose-p:text-slate-400 dark:prose-h4:text-slate-300 dark:prose-strong:text-slate-200 dark:prose-h3:text-slate-200 dark:prose-li:text-slate-400 dark:prose-code:text-slate-200"
+    >
       <div>
         <h3 className="mt-0">Contexte</h3>
         <ReactMarkdown
@@ -19,7 +21,7 @@ export default function WorkContent({ context, work, images, nextWorkSlug }) {
               </Link>
             ),
             code: ({ children }) => (
-              <code className="px-2 py-1.5 text-sm bg-gray-200 rounded-md m-0.5">
+              <code className="px-2 py-1.5 text-sm bg-gray-200 dark:bg-gray-800 rounded-md m-0.5  dark:text-slate-400">
                 {children}
               </code>
             ),

@@ -38,9 +38,9 @@ export default function WorkImages({ images }) {
               src={modalImage}
               alt="Project title"
               title="Project title"
-              width="800"
-              height="600"
-              className="object-cover rounded-lg "
+              width="1200"
+              height="900"
+              className="object-cover rounded-lg"
             />
           </div>
         </Modal>

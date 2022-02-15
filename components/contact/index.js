@@ -24,8 +24,8 @@ export default function Contact() {
         </div>
       </div>
       {/* End of app */}
-      <div className="flex flex-row items-center bottom-4 text-slate-300 text-xs w-full justify-around sm:justify-center p-4">
-        <p>Made with React, Tailwind, Supabase, NextJS and 🥝 by </p>
+      <div className="inline-flex flex-row items-center justify-around w-full gap-1 p-4 text-xs bottom-4 text-slate-300 sm:justify-center">
+        <p>Made with React, Tailwind CSS, Supabase, NextJS &amp; 🥝 by </p>
         <Link href="https://www.linkedin.com/in/robinsouriau/" light>
           Robin Souriau
         </Link>

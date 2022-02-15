@@ -5,7 +5,7 @@ import Button from "../ui/button";
 
 export default function WorkNavigate({ slug }) {
   return (
-    <div className="flex flex-row items-center justify-between">
+    <div className="flex flex-col items-center justify-between gap-2 xs:flex-row">
       <Button
         href="/#works"
         svg={
