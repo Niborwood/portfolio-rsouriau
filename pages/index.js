@@ -20,8 +20,8 @@ export default function Home({ works, tags, error, errorTags }) {
 
       {/* Content */}
       <Introduction />
-      <AboutMe />
       {error ? <p>Erreur</p> : <Works works={works} />}
+      <AboutMe />
       {errorTags ? <p>Erreur</p> : <CV tags={tags} />}
     </Fragment>
   );

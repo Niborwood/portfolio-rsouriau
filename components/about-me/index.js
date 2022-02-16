@@ -41,15 +41,16 @@ export default function AboutMe() {
             compréhension.
           </p>
           <p>
-            Récemment, je me suis pris au jeu de <strong>NextJS</strong>. Je
-            tiens ici enfin le framework qui me dit que c&apos;est le bon, celui
-            où j&apos;ai ce sentiment de &quot;m&apos;amuser sérieusement&quot;,
-            à n&apos;importe quelle échelle. Evidemment, il me reste à apprendre
-            (je suppose qu&apos;il me restera toujours à apprendre, et j&apos;en
-            fait même le voeu solennel), mais si un chemin se distingue des
-            autres, à coups de fonctionnalités et de confort de développement,
-            c&apos;est bien celui de NextJS. Est-ce que tous les autres me font
-            de l&apos;oeil également ? Evidemment que oui.
+            Récemment, je me suis pris au jeu de <strong>React & NextJS</strong>
+            . Je tiens ici enfin le framework qui me dit que c&apos;est le bon,
+            celui où j&apos;ai ce sentiment de &quot;m&apos;amuser
+            sérieusement&quot;, à n&apos;importe quelle échelle. Evidemment, il
+            me reste à apprendre (je suppose qu&apos;il me restera toujours à
+            apprendre, et j&apos;en fait même le voeu solennel), mais si un
+            chemin se distingue des autres, c&apos;est bien celui-ci. Ce qui ne
+            veut pas dire que côté back, je ne m&apos;amuse pas avec les
+            possibilités offertes par <strong>Node</strong>, de
+            l&apos;algorithmie et de la gestion de serveur.
           </p>
           <p>
             Pour autant, ces 10 années furent tout le contraire de perdues.

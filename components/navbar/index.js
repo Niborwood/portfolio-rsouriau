@@ -5,17 +5,6 @@ import Link from "../ui/link";
 
 const menuElements = [
   {
-    href: "about",
-    name: "A Propos",
-    svg: (
-      <path
-        fillRule="evenodd"
-        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-        clipRule="evenodd"
-      />
-    ),
-  },
-  {
     href: "works",
     name: "Works",
     svg: (
@@ -27,6 +16,17 @@ const menuElements = [
         />
         <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
       </Fragment>
+    ),
+  },
+  {
+    href: "about",
+    name: "A Propos",
+    svg: (
+      <path
+        fillRule="evenodd"
+        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+        clipRule="evenodd"
+      />
     ),
   },
   {
@@ -110,7 +110,7 @@ export default function NavBar() {
   ));
 
   return (
-    <nav className="fixed z-30 flex flex-row items-center justify-between w-full px-4 py-6 border-b-4 border-white dark:border-slate-900 bg-gradient-to-br from-teal-700/75 dark:from-teal-900/75 to-teal-500/75 dark:to-teal-800/75 lg:p-8 text-slate-100 dark:text-slate-300 backdrop-blur-md">
+    <nav className="fixed z-30 flex flex-row items-center justify-between w-full px-4 py-6 border-b-4 border-white dark:border-slate-900 bg-gradient-to-br from-teal-700/75 dark:from-teal-900/75 to-teal-500/75 dark:to-teal-800/75 lg:p-6 text-slate-100 dark:text-slate-300 backdrop-blur-md">
       <h1 className="xs:text-xl sm:text-2xl">
         <Link href="/" light>
           <span className="hidden xs:block">Robin Souriau</span>

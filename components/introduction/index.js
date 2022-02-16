@@ -1,7 +1,11 @@
 export default function Introduction() {
   return (
-    <div className="flex flex-col justify-center h-screen p-8 lg:w-2/3 lg:p-24 text-slate-800 dark:text-slate-300 dark:bg-slate-900">
-      <h2 className="my-4 text-5xl sm:text-7xl md:text-8xl ">
+    <div className="relative flex flex-col justify-center h-screen p-8 lg:w-2/3 lg:p-24 text-slate-800 dark:text-slate-300 dark:bg-slate-900">
+      {/* Rounded figure */}
+      {/* <div className="absolute left-0 z-0 rounded-full bg-teal-500/30 top-50 w-96 h-96"></div> */}
+
+      {/* Content */}
+      <h2 className="z-10 my-4 text-5xl sm:text-7xl md:text-8xl ">
         <span className="inline-flex items-center gap-4 my-2">
           Hello !{" "}
           <svg
