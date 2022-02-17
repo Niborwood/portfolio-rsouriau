@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 // COMPONENT IMPORTS
 import CVHead from "./cv-head";
 import CVExperiences from "./cv-experiences";
@@ -6,7 +8,18 @@ import SectionTitle from "../ui/section-title";
 
 export default function CV({ tags }) {
   return (
-    <div id="cv" className="pb-24">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: "some" }}
+      transition={{ duration: 1.25 }}
+      variants={{
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+      }}
+      id="cv"
+      className="pb-24"
+    >
       {/* TITLE */}
       <div className="px-8 lg:p-24">
         <SectionTitle title="C.V." />
@@ -24,6 +37,6 @@ export default function CV({ tags }) {
         {/* COMPETENCES & INTERETS */}
         <CVSkills tags={tags} />
       </div>
-    </div>
+    </motion.div>
   );
 }

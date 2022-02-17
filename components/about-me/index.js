@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 // COMPONENT IMPORTS
 import BackgroundGradient from "../ui/background-gradient";
 
@@ -5,8 +7,18 @@ export default function AboutMe() {
   return (
     <BackgroundGradient id="about">
       <div className="flex flex-col justify-between min-h-screen gap-8 px-8 py-24 lg:flex-row lg:p-24">
-        <div className="flex text-3xl sm:text-4xl sm:w-2/3 xl:w-1/3 xl:items-end">
-          <p className="pt-4 border-t-4 border-white dark:border-slate-300 xl:w-2/3 dark:text-slate-300">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: "some" }}
+          transition={{ duration: 1 }}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: -100 },
+          }}
+          className="flex text-3xl sm:text-4xl sm:w-2/3 xl:w-1/3 xl:items-end"
+        >
+          <p className="pt-4 border-t-4 border-white dark:border-slate-300/70 xl:w-2/3">
             Je vois le développement comme un travail manuel : un atelier, des
             outils, la faculté un peu{" "}
             <strong className="text-slate-800 dark:text-slate-50">
@@ -14,8 +26,18 @@ export default function AboutMe() {
             </strong>{" "}
             de pouvoir potentiellement tout construire.
           </p>
-        </div>
-        <div className="prose sm:columns-2 xl:w-1/2 xl:columns-2 prose-p:text-slate-100 dark:prose-p:text-slate-300/60 prose-strong:text-slate-800 dark:prose-strong:text-slate-100">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: "some" }}
+          transition={{ duration: 3.5, delay: 1, type: "spring" }}
+          variants={{
+            visible: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          className="prose sm:columns-2 xl:w-1/2 xl:columns-2 prose-p:text-slate-100 dark:prose-p:text-slate-300/60 prose-strong:text-slate-800 dark:prose-strong:text-slate-100"
+        >
           <p>
             Il aura fallu quasiment 10 ans pour boucler la boucle. Depuis les
             premiers tutos HTML/CSS jusqu&apos;à ce portfolio, il s&apos;est
@@ -63,7 +85,7 @@ export default function AboutMe() {
           <p>
             A la prochaine <strong>aventure</strong> !
           </p>
-        </div>
+        </motion.div>
       </div>
     </BackgroundGradient>
   );

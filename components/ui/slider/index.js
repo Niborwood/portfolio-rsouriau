@@ -1,6 +1,7 @@
 import Slide from "./slide";
 import propTypes from "prop-types";
 import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Slider({ items }) {
   // Add a listener to sliderRef to detect when the user scrolls
@@ -63,7 +64,16 @@ export default function Slider({ items }) {
   const slides = items?.map((item) => <Slide key={item.id} {...item} />);
 
   return (
-    <div>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: "some" }}
+      transition={{ duration: 1.25 }}
+      variants={{
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+      }}
+    >
       <div aria-label="Slider navigation">
         {/* LEFT ARROW */}
         <button
@@ -116,7 +126,7 @@ export default function Slider({ items }) {
       >
         {slides}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

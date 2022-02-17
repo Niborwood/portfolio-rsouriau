@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 // COMPONENT IMPORTS
 import BackgroundGradient from "../ui/background-gradient";
 import ContactForm from "./contact-form";
@@ -6,9 +8,19 @@ import Link from "../ui/link";
 export default function Contact() {
   return (
     <BackgroundGradient id="contact">
-      <div className="relative flex items-center px-8 py-12 lg:p-24">
-        <div className="flex flex-col justify-end gap-16 xl:w-2/3 lg:flex-row">
-          <div className="space-y-4 text-right lg:w-2/3">
+      <div className="flex items-center min-h-screen px-8 py-12 lg:p-24">
+        <div className="flex flex-col items-center justify-end gap-16 xl:w-2/3 lg:flex-row">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: "some" }}
+            transition={{ duration: 2, type: "spring" }}
+            variants={{
+              visible: { x: 0 },
+              hidden: { x: -200 },
+            }}
+            className="space-y-4 text-right lg:w-2/3"
+          >
             <h2 className="text-5xl lg:text-6xl dark:text-slate-200">
               Envie de me contacter&nbsp;?
             </h2>
@@ -17,10 +29,20 @@ export default function Contact() {
               simplement m&apos;envoyer un petit mot doux, vous pouvez remplir
               le formulaire ci-joint.
             </h3>
-          </div>
-          <div className="lg:w-2/3">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: "all" }}
+            transition={{ duration: 2, delay: 1, type: "spring" }}
+            variants={{
+              visible: { opacity: 1 },
+              hidden: { opacity: 0 },
+            }}
+            className="lg:w-2/3"
+          >
             <ContactForm />
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* End of app */}
