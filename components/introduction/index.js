@@ -5,7 +5,7 @@ export default function Introduction() {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: "all" }}
+      viewport={{ once: false, amount: "some" }}
       transition={{ duration: 1 }}
       variants={{
         visible: { opacity: 1, scale: 1 },
