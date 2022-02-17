@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // COMPONENT IMPORTS
 import Divider from "../ui/divider";
 
-export default function SectionTitle({ title, light }) {
+export default function SectionTitle({ title, light, svg, svgLink }) {
   return (
     <motion.h2
       initial="hidden"
@@ -15,12 +15,32 @@ export default function SectionTitle({ title, light }) {
         visible: { opacity: 1 },
         hidden: { opacity: 0 },
       }}
-      className={`px-8 pt-12 pb-0 mb-24 text-5xl sm:text-7xl text-slate-${
+      className={`px-8 gap-2 inline-flex flex-row items-end pt-12 pb-0 mb-12 text-5xl sm:text-7xl text-slate-${
         light ? "100" : "800"
       } dark:text-slate-300 lg:px-24 lg:py-0`}
     >
-      <Divider />
-      {title}
+      <div>
+        <Divider />
+        {title}
+      </div>
+      {svg && (
+        <a
+          href={svgLink}
+          target="_blank"
+          rel="noreferrer"
+          className="transition dark:hover:text-slate-100 hover:text-slate-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-20 h-20"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            {svg}
+          </svg>
+        </a>
+      )}
     </motion.h2>
   );
 }
@@ -28,9 +48,13 @@ export default function SectionTitle({ title, light }) {
 SectionTitle.propTypes = {
   title: propTypes.string.isRequired,
   light: propTypes.bool,
+  svg: propTypes.node,
+  svgLink: propTypes.string,
 };
 
 SectionTitle.defaultProps = {
   light: false,
   doublePadding: false,
+  svg: null,
+  svgLink: null,
 };
