@@ -19,10 +19,14 @@ export default function Layout({ children }) {
       setIsDark(false);
     }
   }, []);
+  function handleDarkModeChange() {
+    setIsDark((prev) => !prev);
+    localStorage.theme = isDark ? "light" : "dark";
+  }
 
   return (
     <div className={isDark ? "dark" : undefined}>
-      <NavBar isDark={isDark} setIsDark={setIsDark} />
+      <NavBar isDark={isDark} handleDarkModeChange={handleDarkModeChange} />
       <main className="h-full overflow-hidden dark:bg-slate-900 dark:text-slate-300">
         {children}
       </main>

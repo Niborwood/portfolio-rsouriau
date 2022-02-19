@@ -70,7 +70,7 @@ const socials = [
   },
 ];
 
-export default function NavBar({ isDark, setIsDark }) {
+export default function NavBar({ isDark, handleDarkModeChange }) {
   const navElements = menuElements.map((element) => (
     <li className="items-center" key={element.href}>
       <Link title={element.name} href={`/#${element.href}`} light>
@@ -126,7 +126,7 @@ export default function NavBar({ isDark, setIsDark }) {
           {socialElements}
         </ul>
         <button
-          onClick={() => setIsDark((prev) => !prev)}
+          onClick={handleDarkModeChange}
           className="self-baseline hover:text-slate-200"
         >
           {/* Dark Mode */}
@@ -161,5 +161,5 @@ export default function NavBar({ isDark, setIsDark }) {
 
 NavBar.propTypes = {
   isDark: propTypes.bool.isRequired,
-  setIsDark: propTypes.func.isRequired,
+  handleDarkModeChange: propTypes.func.isRequired,
 };
