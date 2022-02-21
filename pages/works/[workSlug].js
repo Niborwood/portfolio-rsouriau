@@ -1,4 +1,5 @@
 import { supabase } from "../../utils/supabase-client";
+import Head from "next/head";
 
 // COMPONENT IMPORTS
 import WorkHead from "../../components/works/work-head";
@@ -11,6 +12,17 @@ export default function WorkPage({ work, nextWorkSlug, error }) {
 
   return (
     <div className="py-8">
+      <Head>
+        <title>{work.title} - Portfolio | Robin Souriau</title>
+        <meta
+          name="description"
+          content={work.description.slice(0, 130) + "..."}
+        />
+        <meta property="og:title" content={work.title} />
+        <meta property="og:description" content={work.description} />
+        <meta property="og:image" content={work.image} />
+      </Head>
+
       <WorkHead
         title={work.title}
         description={work.description}

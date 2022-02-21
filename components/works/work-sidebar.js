@@ -9,9 +9,9 @@ export default function WorkSidebar({ techs, demoLink, githubLink }) {
     <div className="p-8 mt-16 mb-8 sm:w-1/4 sm:pt-0 sm:mt-12 lg:p-24 lg:pt-12">
       {/* TECHS */}
       <div className="mb-16">
-        <h4 className="pl-1 text-xl uppercase text-slate-400">
+        <h3 className="pl-1 text-xl uppercase text-slate-400">
           Technologies utilisées
-        </h4>
+        </h3>
         <TagCloud tags={techs} />
       </div>
 

@@ -128,6 +128,7 @@ export default function NavBar({ isDark, handleDarkModeChange }) {
         <button
           onClick={handleDarkModeChange}
           className="self-baseline hover:text-slate-200"
+          aria-label="toggle dark mode"
         >
           {/* Dark Mode */}
           <svg

@@ -20,12 +20,11 @@ export default function AboutMe() {
         >
           <p className="pt-4 border-t-4 border-white dark:border-slate-300/70 xl:w-2/3">
             Je vois le développement comme un travail manuel : un atelier, des
-            outils, la faculté un peu{" "}
+            outils, la faculté de pouvoir{" "}
             <strong className="text-slate-800 dark:text-slate-50">
-              magique
-            </strong>{" "}
-            de pouvoir résoudre toutes sortes de problèmes, des plus usuels aux
-            plus spécifiques.
+              résoudre toutes sortes de problèmes
+            </strong>
+            , des plus usuels aux plus spécifiques.
           </p>
         </motion.div>
         <motion.div
