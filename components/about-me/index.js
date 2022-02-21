@@ -24,7 +24,8 @@ export default function AboutMe() {
             <strong className="text-slate-800 dark:text-slate-50">
               magique
             </strong>{" "}
-            de pouvoir potentiellement tout construire.
+            de pouvoir résoudre toutes sortes de problèmes, des plus usuels aux
+            plus spécifiques.
           </p>
         </motion.div>
         <motion.div
@@ -63,16 +64,17 @@ export default function AboutMe() {
             compréhension.
           </p>
           <p>
-            Récemment, je me suis pris au jeu de <strong>React & NextJS</strong>
-            . Je tiens ici enfin le framework qui me dit que c&apos;est le bon,
-            celui où j&apos;ai ce sentiment de &quot;m&apos;amuser
-            sérieusement&quot;, à n&apos;importe quelle échelle. Evidemment, il
-            me reste à apprendre (je suppose qu&apos;il me restera toujours à
-            apprendre, et j&apos;en fait même le voeu solennel), mais si un
-            chemin se distingue des autres, c&apos;est bien celui-ci. Ce qui ne
-            veut pas dire que côté back, je ne m&apos;amuse pas avec les
-            possibilités offertes par <strong>Node</strong>, de
-            l&apos;algorithmie et de la gestion de serveur.
+            Récemment, je me suis pris au jeu de <strong>React</strong>. Je
+            tiens ici enfin le framework qui me dit que c&apos;est le bon, celui
+            où j&apos;ai ce sentiment de &quot;m&apos;amuser sérieusement&quot;,
+            à n&apos;importe quelle échelle. Evidemment, il me reste à apprendre
+            (je suppose qu&apos;il me restera toujours à apprendre, et j&apos;en
+            fait même le voeu solennel), mais si un chemin se distingue des
+            autres, c&apos;est bien celui-ci. <strong>NextJS</strong> est
+            également un péché mignon. Ce qui ne veut pas dire que côté back, je
+            ne m&apos;amuse pas avec les possibilités offertes par{" "}
+            <strong>Node</strong>, de l&apos;algorithmie et de la gestion de
+            serveur.
           </p>
           <p>
             Pour autant, ces 10 années furent tout le contraire de perdues.
