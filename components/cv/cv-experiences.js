@@ -2,7 +2,7 @@ const experiences = [
   {
     title: "Développeur Fullstack JS",
     company: "Diggers Factory",
-    date: "2020",
+    date: "2022 - Today",
     description:
       "Développement fullstack agile. React, NextJS, AdonisJS, SQL.",
   },
