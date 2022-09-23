@@ -1,0 +1,23 @@
+{
+  "head": {
+    "title": "Robin Souriau - Développeur web fullstack JS, CV & Portfolio",
+    "description": "React, NextJS, Node and Tailwind enthusiast. This is my personal portfolio and CV. Discover my works!"
+  },
+  "error": "Erreur",
+  "fullstack_dev": "développeur web fullstack JS",
+  "introduction": {
+    "greetings": "Je m'appelle ",
+    "iam": "Je suis ",
+    "based_in": " basé à Paris."
+  },
+  "navbar": {
+    "about": "À propos"
+  },
+  "about_me": {
+    "quote": {
+      "part1": "Je vois le développement comme un travail manuel : un atelier, des outils, la faculté de pouvoir ",
+      "part2": "résoudre toutes sortes de problèmes ",
+      "part3": ", des plus usuels aux plus spécifiques."
+    }
+  }
+}

@@ -1,7 +1,8 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import { supabase } from "../utils/supabase-client";
-import { useTranslation } from "../hooks/useTranslation";
+import useTranslation from 'next-translate/useTranslation' 
+import Trans from 'next-translate/Trans'
 
 // COMPONENT IMPORTS
 import Introduction from "../components/introduction";
@@ -10,33 +11,33 @@ import Works from "../components/works";
 import CV from "../components/cv";
 
 export default function Home({ works, tags, error, errorTags }) {
-  const {t} = useTranslation();
+  const {t} = useTranslation('common');
   
   return (
     <Fragment>
       {/* Head */}
       <Head>
         <title>
-          Robin Souriau - Développeur web fullstack, CV &amp; Portfolio
+         { t('head.title') }
         </title>
         <meta
           name="title"
-          content="Robin Souriau - Développeur web fullstack, CV & Portfolio"
+          content={t('head.title')}
         />
         <meta
           name="description"
-          content="React, NextJS, Node and Tailwind enthusiast. This is my personal portfolio and CV. Discover my works!"
+          content={t('head.description')}
         />
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.robinsouriau.dev/" />
         <meta
           property="og:title"
-          content="Robin Souriau - Développeur web fullstack, CV & Portfolio"
+          content={t('head.title')}
         />
         <meta
           property="og:description"
-          content="React, NextJS, Node and Tailwind enthusiast. This is my personal portfolio and CV. Discover my works!"
+          content={t('head.description')}
         />
         <meta
           property="og:image"
@@ -47,11 +48,11 @@ export default function Home({ works, tags, error, errorTags }) {
         <meta property="twitter:url" content="https://www.robinsouriau.dev/" />
         <meta
           property="twitter:title"
-          content="Robin Souriau - Développeur web fullstack, CV & Portfolio"
+          content={t('head.title')}
         />
         <meta
           property="twitter:description"
-          content="React, NextJS, Node and Tailwind enthusiast. This is my personal portfolio and CV. Discover my works!"
+          content={t('head.description')}
         />
         <meta
           property="twitter:image"
@@ -61,9 +62,9 @@ export default function Home({ works, tags, error, errorTags }) {
 
       {/* Content */}
       <Introduction />
-      {error ? <p>Erreur</p> : <Works works={works} />}
+      {error ? <p>{t('error')}</p> : <Works works={works} />}
       <AboutMe />
-      {errorTags ? <p>Erreur</p> : <CV tags={tags} />}
+      {errorTags ? <p>{t('error')}</p> : <CV tags={tags} />}
     </Fragment>
   );
 }

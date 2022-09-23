@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Introduction() {
+  const { t } = useTranslation();
   return (
     <motion.div
       initial="hidden"
@@ -15,18 +17,18 @@ export default function Introduction() {
     >
       <h2 className="my-4 text-5xl sm:text-7xl md:text-8xl ">
         <span className="inline-flex items-center gap-4 my-2">Hello ! 👋</span>
-        <br /> Je m&apos;appelle{" "}
-        <span className="font-bold text-teal-600 dark:text-teal-600">
+        <br /> {t('introduction.greetings')}
+         <span className="font-bold text-teal-600 dark:text-teal-600">
           Robin Souriau
         </span>
         .
       </h2>
       <h3 className="text-2xl md:text-3xl">
-        Je suis{" "}
+        {t('introduction.iam')}
         <span className="font-bold text-teal-600 dark:text-teal-600">
-          développeur web fullstack
+          {t('fullstack_dev')}
         </span>{" "}
-        basé à Paris.
+        {t('introduction.based_in')}
       </h3>
     </motion.div>
   );

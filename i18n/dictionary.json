@@ -1,8 +1,12 @@
 {
   "fr": {
-    "head_title": "Robin Souriau - Développeur web fullstack JS, CV & Portfolio"
+    "head": {
+      "title": "Robin Souriau - Développeur web fullstack JS, CV & Portfolio"
+    }
   },
   "en": {
-    "head_title": "Robin Souriau - JS Fullstack developer, CV & Portfolio"
+    "head": {
+      "title": "Robin Souriau - JS Fullstack developer, CV & Portfolio"
+    }
   }
 }
