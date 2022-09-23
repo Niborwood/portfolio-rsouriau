@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import { supabase } from "../utils/supabase-client";
+import { useTranslation } from "../hooks/useTranslation";
 
 // COMPONENT IMPORTS
 import Introduction from "../components/introduction";
@@ -9,6 +10,8 @@ import Works from "../components/works";
 import CV from "../components/cv";
 
 export default function Home({ works, tags, error, errorTags }) {
+  const {t} = useTranslation();
+  
   return (
     <Fragment>
       {/* Head */}
