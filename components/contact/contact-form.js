@@ -1,10 +1,13 @@
 import { useState } from "react";
+import useTranslation from "next-translate/useTranslation";
 
 // COMPONENTS IMPORTS
 import Button from "../ui/button";
 import Input from "../ui/form/input";
 
 export default function ContactForm() {
+  const { t } = useTranslation();
+
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -25,13 +28,13 @@ export default function ContactForm() {
       values.email.trim() === "" ||
       values.message.trim() === ""
     ) {
-      setFormMessage("Merci de remplir tous les champs");
+      setFormMessage(t('contact.form.fill_inputs'));
       return;
     }
 
     // Check if email is valid
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
-      setFormMessage("Merci de saisir une adresse email valide");
+      setFormMessage(t('contact.form.invalid_email'));
       return;
     }
 
@@ -60,7 +63,7 @@ export default function ContactForm() {
     <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
       <Input
         name="name"
-        placeholder="Nom"
+        placeholder={t('contact.form.name')}
         value={values.name}
         onChange={onChange}
       />
@@ -78,7 +81,7 @@ export default function ContactForm() {
         textarea
       />
       <Button type="submit" text="Envoyer" light large>
-        Envoyer
+        {t('contact.form.submit')}
       </Button>
       <p className="text-slate-100">{formMessage}</p>
     </form>

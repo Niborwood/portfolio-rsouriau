@@ -18,6 +18,104 @@
       "part1": "Je vois le développement comme un travail manuel : un atelier, des outils, la faculté de pouvoir ",
       "part2": "résoudre toutes sortes de problèmes ",
       "part3": ", des plus usuels aux plus spécifiques."
+    },
+    "paragraph1": {
+      "part1": "Il aura fallu quasiment 10 ans pour boucler la boucle. Depuis les premiers tutos HTML/CSS jusqu'à ce portfolio, il s'est passé plein de choses. Des interviews culturelles de personnalités de la musique, de la gestion fonctionnelle de projets web, des projets personnels liés au cinéma ou au sport. Mais au final, il semblerait que ce soit James Cameron qui ait raison : le ",
+      "part2": " finit toujours pas l'emporter."
+    },
+    "paragraph2": {
+      "part1": "Après un retour au source et une formidable formation de 6 mois chez O'Clock et le ",
+      "strong1": "Titre Pro Développeur web et mobile",
+      "part2": " obtenu, me voilà donc enfin officiellement développeur web JavaScript."
+    },
+    "paragraph3": {
+      "part1": " parce que j'aime toucher à tout, de la carrosserie au capot, parce que des lignes de code, qu'elles soient exécutées côté client ou côté serveur, cela reste des lignes de code : une magie étonnament rationnelle, passionnante. ",
+      "part2": " parce que depuis petit, c'est un medium qui me plaît et me fascine, tant dans sa construction que dans sa compréhension."
+    },
+    "paragraph4": {
+      "part1": "Récemment, je me suis pris au jeu de ",
+      "part2": ". Je tiens ici enfin le framework qui me dit que c'est le bon, celui où j'ai ce sentiment de \"m'amuser sérieusement\", à n'importe quelle échelle. Evidemment, il me reste à apprendre (je suppose qu'il me restera toujours à apprendre, et j'en fait même le voeu solennel), mais si un chemin se distingue des autres, c'est bien celui-ci. ",
+      "part3": " est également un péché mignon. Ce qui ne veut pas dire que côté back, je ne m'amuse pas avec les possibilités offertes par ",
+      "part4": ", de l'algorithmie et de la gestion de serveur."
+    },
+    "paragraph5": {
+      "part1": "Pour autant, ces 10 années furent tout le contraire de perdues. J'y ai appris un sens du travail en ",
+      "part2": ", à petite et grande échelle, un goût prononcé pour la ",
+      "part3": " et l'adaptation et une envie de construire, toujours à plusieurs, des outils et des services utiles et performants.",
+      "strong1": "équipe",
+      "strong2": "polyvalence"
+    },
+    "paragraph6": {
+      "part1": "À la prochaine ",
+      "part2": " !",
+      "strong1": "aventure"
     }
+  },
+  "cv": {
+    "licence": "Permis B",
+    "experiences": {
+      "title": "Expériences",
+      "today": "Aujourd'hui",
+      "diggers": {
+        "title": "Développeur Fullstack JS",
+        "description": "Développement agile sur React/Next/Adonis d'une solution e-commerce et outil interne à l'entreprise. Bugfix, intégration de fonctionnalités."
+      },
+      "pimlicom": {
+        "title": "Chef de projet web | Pimlicom",
+        "description": "Gestion de projet web pour TPE & PME. Élaboration de CDC. Suivi technique de développement. Rédaction web. Positionnement et stratégie SEO. Recettage. Formations."
+      },
+      "hypesoul": {
+        "title": "Rédacteur en chef | HypeSoul",
+        "description": "Rédacteur, développeur web et Community Manager au sein d'un média de culture urbaine. Administration du CMS Wordpress. Monitoring et reporting SEO & e-réputation"
+      }  
+    },
+    "education": {
+      "title": "Formations",
+      "titre_pro": {
+        "title": "Titre Professionnel - Développeur web et mobile"
+      },
+      "oclock": {
+        "title": "Formation fullstack JS/React",
+        "description": "O'Clock"
+      },
+      "masters": {
+        "title": "Master 2 Culture et Métiers du Web",
+        "description": "Mention Très Bien, UPEM"
+      },      
+      "licence": {
+        "title": "Licence 3 Sciences Humaines et Sociales",
+        "description": "Mention Assez Bien, UPEM"
+      },
+      "bac": {
+        "title": "Baccalauréat L, option Anglais Renforcé",
+        "description": "Mention Bien, Lycée Françoise Cabrini"
+      }      
+    },
+    "skills": {
+      "title": "Compétences",
+      "cta": "Envie de les voir en pratique ? ",
+      "cta_link": "Découvrez mes projets."
+    },
+    "hobbies": {
+      "title": "Centres d'intérêt",
+      "since": "Depuis",
+      "roundnet": "Président puis membre de l'association Roundnet Paris, promouvant le roundnet en Ile de France",
+      "podcast": "Fondateur & animateur du podcast cinéma La Troisième Rangée",
+      "other": "Sport, Cinéma, Séries, Veille technologique"
+    }
+  },
+  "contact": {
+    "title": "Envie de me contacter ?",
+    "cta_text": "Pour en savoir plus sur mes travaux, mes compétences ou tout simplement m'envoyer un petit mot doux, vous pouvez remplir le formulaire ci-joint.",
+    "form": {
+      "name": "Nom",
+      "submit": "Envoyer",
+      "fill_inputs": "Merci de remplir tous les champs",
+      "invalid_email": "Merci de renseigner une adresse email valide"
+    }
+  },
+  "footer": {
+    "made": "Site réalisé avec ",
+    "by": " par "
   }
 }

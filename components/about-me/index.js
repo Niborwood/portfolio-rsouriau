@@ -40,52 +40,27 @@ export default function AboutMe() {
           className="prose sm:columns-2 xl:w-1/2 xl:columns-2 prose-p:text-slate-100 dark:prose-p:text-slate-300/60 prose-strong:text-slate-800 dark:prose-strong:text-slate-100"
         >
           <p>
-            Il aura fallu quasiment 10 ans pour boucler la boucle. Depuis les
-            premiers tutos HTML/CSS jusqu&apos;à ce portfolio, il s&apos;est
-            passé plein de choses. Des interviews culturelles de personnalités
-            de la musique, de la gestion fonctionnelle de projets web, des
-            projets personnels liés au cinéma ou au sport. Mais au final, il
-            semblerait que ce soit James Cameron qui ait raison : le{" "}
-            <strong>code</strong> finit toujours pas l&apos;emporter.
+            {t('about_me.paragraph1.part1')}
+            <strong>code</strong> {t('about_me.paragraph1.part2')}
           </p>
           <p>
-            Après un retour au source et une formidable formation de 6 mois chez
-            O&apos;Clock et le{" "}
-            <strong>Titre Pro Développeur web et mobile</strong> obtenu, me
-            voilà donc enfin officiellement développeur web JavaScript.
+            {t('about_me.paragraph2.part1')}
+            <strong>{t('about_me.paragraph2.strong1')}</strong> {t('about_me.paragraph2.part2')}
           </p>
           <p>
-            <strong>Fullstack</strong> parce que j&apos;aime toucher à tout, de
-            la carrosserie au capot, parce que des lignes de code, qu&apos;elles
-            soient exécutées côté client ou côté serveur, cela reste des lignes
-            de code : une magie étonnament rationnelle, passionnante.{" "}
-            <strong>Web</strong>, parce que depuis petit, c&apos;est un medium
-            qui me plaît et me fascine, tant dans sa construction que dans sa
-            compréhension.
+            <strong>Fullstack</strong> {t('about_me.paragraph3.part1')}
+            <strong>Web</strong>, {t('about_me.paragraph3.part2')}
           </p>
           <p>
-            Récemment, je me suis pris au jeu de <strong>React</strong>. Je
-            tiens ici enfin le framework qui me dit que c&apos;est le bon, celui
-            où j&apos;ai ce sentiment de &quot;m&apos;amuser sérieusement&quot;,
-            à n&apos;importe quelle échelle. Evidemment, il me reste à apprendre
-            (je suppose qu&apos;il me restera toujours à apprendre, et j&apos;en
-            fait même le voeu solennel), mais si un chemin se distingue des
-            autres, c&apos;est bien celui-ci. <strong>NextJS</strong> est
-            également un péché mignon. Ce qui ne veut pas dire que côté back, je
-            ne m&apos;amuse pas avec les possibilités offertes par{" "}
-            <strong>Node</strong>, de l&apos;algorithmie et de la gestion de
-            serveur.
+            {t('about_me.paragraph4.part1')} <strong>React</strong>{t('about_me.paragraph4.part2')}<strong>NextJS</strong>{t('about_me.paragraph4.part3')}
+            <strong>Node</strong>{t('about_me.paragraph4.part4')}
           </p>
           <p>
-            Pour autant, ces 10 années furent tout le contraire de perdues.
-            J&apos;y ai appris un sens du travail en <strong>équipe</strong>, à
-            petite et grande échelle, un goût prononcé pour la{" "}
-            <strong>polyvalence</strong> et l&apos;adaptation et une envie de
-            construire, toujours à plusieurs, des outils et des services utiles
-            et performants.
+            {t('about_me.paragraph5.part1')}<strong>{t('about_me.paragraph5.strong1')}</strong>{t('about_me.paragraph5.part2')}
+            <strong>{t('about_me.paragraph5.strong2')}</strong>{t('about_me.paragraph5.part3')}
           </p>
           <p>
-            A la prochaine <strong>aventure</strong> !
+            {t('about_me.paragraph6.part1')}<strong>{t('about_me.paragraph6.strong1')}</strong>{t('about_me.paragraph6.part2')}
           </p>
         </motion.div>
       </div>
