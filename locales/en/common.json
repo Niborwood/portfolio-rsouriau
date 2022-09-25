@@ -70,21 +70,22 @@
       }
     },
     "education": {
-      "title": "Formations",
+      "title": "Education",
       "titre_pro": {
-        "title": "Titre Professionnel - Développeur web et mobile"
+        "title": "Mobile and web developer professional certificate",
+        "description": "French ministry of labour"
       },
       "oclock": {
-        "title": "Formation fullstack JS/React",
+        "title": "Fullstack JS course O'Clock",
         "description": "O'Clock"
       },
       "masters": {
-        "title": "Master 2 Culture et Métiers du Web",
-        "description": "Mention Très Bien, UPEM"
+        "title": "Web development and sociology master degree",
+        "description": "Summa cum Laude, UPEM"
       },
       "licence": {
-        "title": "Licence 3 Sciences Humaines et Sociales",
-        "description": "Mention Assez Bien, UPEM"
+        "title": "Social sciences and humanities licence degree",
+        "description": "with honours, UPEM"
       },
       "bac": {
         "title": "Baccalauréat L, option Anglais Renforcé",
@@ -92,30 +93,30 @@
       }
     },
     "skills": {
-      "title": "Compétences",
-      "cta": "Envie de les voir en pratique ? ",
-      "cta_link": "Découvrez mes projets."
+      "title": "Skills",
+      "cta": "Keen to see them in action? ",
+      "cta_link": "Check my side projects."
     },
     "hobbies": {
-      "title": "Centres d'intérêt",
-      "since": "Depuis",
-      "roundnet": "Président puis membre de l'association Roundnet Paris, promouvant le roundnet en Ile de France",
-      "podcast": "Fondateur & animateur du podcast cinéma La Troisième Rangée",
-      "other": "Sport, Cinéma, Séries, Veille technologique"
+      "title": "Hobbies",
+      "since": "Since",
+      "roundnet": "President of Roundnet Paris, promoting roundnet the sport in Paris. Creator or Roundnet Frane website, made in React/Next.",
+      "podcast": "Host & Creator of french movie podcast \"La Troisième Rangée\"",
+      "other": "Sports, Movies, Writing, Tech enthusiast"
     }
   },
   "contact": {
-    "title": "Envie de me contacter ?",
-    "cta_text": "Pour en savoir plus sur mes travaux, mes compétences ou tout simplement m'envoyer un petit mot doux, vous pouvez remplir le formulaire ci-joint.",
+    "title": "Let's keep in touch!",
+    "cta_text": "Wanna get to know more about my works, my skills, or juste to leave me a sweet word? Please fill this form below.",
     "form": {
-      "name": "Nom",
-      "submit": "Envoyer",
-      "fill_inputs": "Merci de remplir tous les champs",
-      "invalid_email": "Merci de renseigner une adresse email valide"
+      "name": "Name",
+      "submit": "Submit",
+      "fill_inputs": "Please fill all inputs.",
+      "invalid_email": "Please enter a valid email address."
     }
   },
   "footer": {
-    "made": "Site réalisé avec",
-    "by": "par"
+    "made": "Made with",
+    "by": "by"
   }
 }
