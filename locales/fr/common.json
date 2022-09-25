@@ -20,11 +20,11 @@
       "part3": ", des plus usuels aux plus spécifiques."
     },
     "paragraph1": {
-      "part1": "Il aura fallu quasiment 10 ans pour boucler la boucle. Depuis les premiers tutos HTML/CSS jusqu'à ce portfolio, il s'est passé plein de choses. Des interviews culturelles de personnalités de la musique, de la gestion fonctionnelle de projets web, des projets personnels liés au cinéma ou au sport. Mais au final, il semblerait que ce soit James Cameron qui ait raison : le ",
+      "part1": "Il aura fallu quasiment 10 ans pour boucler la boucle. Depuis les premiers tutos HTML/CSS jusqu'à ce portfolio, il s'est passé plein de choses. Des interviews culturelles de personnalités de la musique, de la gestion fonctionnelle de projets web, des side projects à n'en plus finir. Mais au final, il semblerait que ce soit James Cameron qui ait raison : le ",
       "part2": " finit toujours pas l'emporter."
     },
     "paragraph2": {
-      "part1": "Après un retour au source et une formidable formation de 6 mois chez O'Clock et le ",
+      "part1": "Après un retour aux sources et une formidable formation de 6 mois chez O'Clock et le ",
       "strong1": "Titre Pro Développeur web et mobile",
       "part2": " obtenu, me voilà donc enfin officiellement développeur web JavaScript."
     },
@@ -115,7 +115,7 @@
     }
   },
   "footer": {
-    "made": "Site réalisé avec ",
-    "by": " par "
+    "made": "Site réalisé avec",
+    "by": "par"
   }
 }

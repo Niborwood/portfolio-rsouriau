@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import useTranslation from "next-translate/useTranslation";
 
 // COMPONENT IMPORTS
 import BackgroundGradient from "../ui/background-gradient";
@@ -6,6 +7,8 @@ import ContactForm from "./contact-form";
 import Link from "../ui/link";
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <BackgroundGradient id="contact">
       <div className="flex items-center min-h-screen px-8 py-12 lg:p-24">
@@ -22,12 +25,10 @@ export default function Contact() {
             className="space-y-4 text-right lg:w-2/3"
           >
             <h2 className="text-5xl lg:text-6xl dark:text-slate-200">
-              Envie de me contacter&nbsp;?
+              {t("contact:title")}
             </h2>
             <h3 className="text-lg lg:text-2xl dark:text-slate-300">
-              Pour en savoir plus sur mes travaux, mes compétences ou tout
-              simplement m&apos;envoyer un petit mot doux, vous pouvez remplir
-              le formulaire ci-joint.
+              {t("contact:cta_text")}
             </h3>
           </motion.div>
           <motion.div
@@ -47,7 +48,10 @@ export default function Contact() {
       </div>
       {/* End of app */}
       <div className="inline-flex flex-row items-center justify-around w-full gap-1 p-4 text-xs bottom-4 text-slate-300 sm:justify-center">
-        <p>Made with React, Tailwind CSS, Supabase, NextJS &amp; 🥝 by </p>
+        <p>
+          {t("footer.made")} React, Tailwind CSS, Supabase, NextJS &amp; 🥝{" "}
+          {t("footer.by")}{" "}
+        </p>
         <Link href="https://www.linkedin.com/in/robinsouriau/" light>
           Robin Souriau
         </Link>

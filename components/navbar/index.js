@@ -1,12 +1,10 @@
 import { Fragment, useMemo } from "react";
 import propTypes from "prop-types";
-import useTranslation from 'next-translate/useTranslation'
-
+import useTranslation from "next-translate/useTranslation";
+import setLanguage from "next-translate/setLanguage";
 
 // COMPONENTS IMPORT
 import Link from "../ui/link";
-
-
 
 const socials = [
   {
@@ -28,55 +26,57 @@ const socials = [
 export default function NavBar({ isDark, handleDarkModeChange }) {
   const { t, lang } = useTranslation();
 
-  const menuElements = useMemo(() => [
-  {
-    href: "works",
-    name: "Works",
-    svg: (
-      <Fragment>
-        <path
-          fillRule="evenodd"
-          d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-          clipRule="evenodd"
-        />
-        <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-      </Fragment>
-    ),
-  },
-  {
-    href: "about",
-    name: t('navbar.about'),
-    svg: (
-      <path
-        fillRule="evenodd"
-        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-        clipRule="evenodd"
-      />
-    ),
-  },
-  {
-    href: "cv",
-    name: "CV",
-    svg: (
-      <path
-        fillRule="evenodd"
-        d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
-        clipRule="evenodd"
-      />
-    ),
-  },
-  {
-    href: "contact",
-    name: "Contact",
-    svg: (
-      <Fragment>
-        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-      </Fragment>
-    ),
-  },
-], [lang])
-
+  const menuElements = useMemo(
+    () => [
+      {
+        href: "works",
+        name: "Works",
+        svg: (
+          <Fragment>
+            <path
+              fillRule="evenodd"
+              d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+              clipRule="evenodd"
+            />
+            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+          </Fragment>
+        ),
+      },
+      {
+        href: "about",
+        name: t("navbar.about"),
+        svg: (
+          <path
+            fillRule="evenodd"
+            d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+            clipRule="evenodd"
+          />
+        ),
+      },
+      {
+        href: "cv",
+        name: "CV",
+        svg: (
+          <path
+            fillRule="evenodd"
+            d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+            clipRule="evenodd"
+          />
+        ),
+      },
+      {
+        href: "contact",
+        name: "Contact",
+        svg: (
+          <Fragment>
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+          </Fragment>
+        ),
+      },
+    ],
+    [lang]
+  );
 
   const navElements = menuElements.map((element) => (
     <li className="items-center" key={element.href}>
@@ -132,12 +132,12 @@ export default function NavBar({ isDark, handleDarkModeChange }) {
         <ul className="flex flex-row items-center justify-center">
           {socialElements}
         </ul>
+        {/* Dark Mode */}
         <button
           onClick={handleDarkModeChange}
           className="self-baseline hover:text-slate-200"
           aria-label="toggle dark mode"
         >
-          {/* Dark Mode */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-6 h-6"
@@ -160,6 +160,28 @@ export default function NavBar({ isDark, handleDarkModeChange }) {
                 d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
               />
             )}
+          </svg>
+        </button>
+
+        {/* Language */}
+        <button
+          onClick={async () => await setLanguage("en")}
+          className="self-baseline hover:text-slate-200"
+          aria-label="toggle dark mode"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+            />
           </svg>
         </button>
       </div>

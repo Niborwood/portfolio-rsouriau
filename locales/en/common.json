@@ -1,5 +1,121 @@
 {
   "head": {
-    "title": "Robin Souriau - JS Fullstack developer, CV & Portfolio"
+    "title": "Robin Souriau - JS fullstack developer, CV & Portfolio",
+    "description": "React, NextJS, Node and Tailwind enthusiast. This is my personal portfolio and CV. Discover my works!"
+  },
+  "error": "Error",
+  "fullstack_dev": "JS fullstack developer",
+  "introduction": {
+    "greetings": "My name is ",
+    "iam": "I am a ",
+    "based_in": " based in Paris, France."
+  },
+  "navbar": {
+    "about": "About"
+  },
+  "about_me": {
+    "quote": {
+      "part1": "I see programming as a form of manual labor. A workshop containing tools, materials, and the ability to   ",
+      "part2": "solve all kinds of problems",
+      "part3": ", from usual to specific ones."
+    },
+    "paragraph1": {
+      "part1": "It's been 10 years of a long and rich voyage to be where I am today. From my first HTML & CSS tutorials to this very portfolio, my journey has been full of challenges and discoveries. Music interviews of major french Hip hop artists, project management, side projects with equal amount of enthusiasm. But at the end of the day, it seems that ",
+      "part2": " always ends up being the most important thing for me."
+    },
+    "paragraph2": {
+      "part1": "In 2021, I decided to take a break from my job as a project manager to focus on my passion for programming. Through a 6 month intensive course at O'Clock, I learned the basics of web development and obtained my ",
+      "strong1": "Mobile and Web developer professional certificate",
+      "part2": " to become a JS fullstack developer."
+    },
+    "paragraph3": {
+      "part1": " because I love to be able to handle a bit of everything, from top to bottom. Code, might it be front-end or back-end, still remains code. It has the same magical attribute to build, solve, create. ",
+      "part2": " because ever since I was a kid, I've always been fascinated by this form of communication, and by the links it can create between people, the communities it can build."
+    },
+    "paragraph4": {
+      "part1": "Récemment, je me suis pris au jeu de ",
+      "part2": ". Je tiens ici enfin le framework qui me dit que c'est le bon, celui où j'ai ce sentiment de \"m'amuser sérieusement\", à n'importe quelle échelle. Evidemment, il me reste à apprendre (je suppose qu'il me restera toujours à apprendre, et j'en fait même le voeu solennel), mais si un chemin se distingue des autres, c'est bien celui-ci. ",
+      "part3": " est également un péché mignon. Ce qui ne veut pas dire que côté back, je ne m'amuse pas avec les possibilités offertes par ",
+      "part4": ", de l'algorithmie et de la gestion de serveur."
+    },
+    "paragraph5": {
+      "part1": "Pour autant, ces 10 années furent tout le contraire de perdues. J'y ai appris un sens du travail en ",
+      "part2": ", à petite et grande échelle, un goût prononcé pour la ",
+      "part3": " et l'adaptation et une envie de construire, toujours à plusieurs, des outils et des services utiles et performants.",
+      "strong1": "équipe",
+      "strong2": "polyvalence"
+    },
+    "paragraph6": {
+      "part1": "À la prochaine ",
+      "part2": " !",
+      "strong1": "aventure"
+    }
+  },
+  "cv": {
+    "licence": "Permis B",
+    "experiences": {
+      "title": "Expériences",
+      "today": "Aujourd'hui",
+      "diggers": {
+        "title": "Développeur Fullstack JS",
+        "description": "Développement agile sur React/Next/Adonis d'une solution e-commerce et outil interne à l'entreprise. Bugfix, intégration de fonctionnalités."
+      },
+      "pimlicom": {
+        "title": "Chef de projet web | Pimlicom",
+        "description": "Gestion de projet web pour TPE & PME. Élaboration de CDC. Suivi technique de développement. Rédaction web. Positionnement et stratégie SEO. Recettage. Formations."
+      },
+      "hypesoul": {
+        "title": "Rédacteur en chef | HypeSoul",
+        "description": "Rédacteur, développeur web et Community Manager au sein d'un média de culture urbaine. Administration du CMS Wordpress. Monitoring et reporting SEO & e-réputation"
+      }
+    },
+    "education": {
+      "title": "Formations",
+      "titre_pro": {
+        "title": "Titre Professionnel - Développeur web et mobile"
+      },
+      "oclock": {
+        "title": "Formation fullstack JS/React",
+        "description": "O'Clock"
+      },
+      "masters": {
+        "title": "Master 2 Culture et Métiers du Web",
+        "description": "Mention Très Bien, UPEM"
+      },
+      "licence": {
+        "title": "Licence 3 Sciences Humaines et Sociales",
+        "description": "Mention Assez Bien, UPEM"
+      },
+      "bac": {
+        "title": "Baccalauréat L, option Anglais Renforcé",
+        "description": "Mention Bien, Lycée Françoise Cabrini"
+      }
+    },
+    "skills": {
+      "title": "Compétences",
+      "cta": "Envie de les voir en pratique ? ",
+      "cta_link": "Découvrez mes projets."
+    },
+    "hobbies": {
+      "title": "Centres d'intérêt",
+      "since": "Depuis",
+      "roundnet": "Président puis membre de l'association Roundnet Paris, promouvant le roundnet en Ile de France",
+      "podcast": "Fondateur & animateur du podcast cinéma La Troisième Rangée",
+      "other": "Sport, Cinéma, Séries, Veille technologique"
+    }
+  },
+  "contact": {
+    "title": "Envie de me contacter ?",
+    "cta_text": "Pour en savoir plus sur mes travaux, mes compétences ou tout simplement m'envoyer un petit mot doux, vous pouvez remplir le formulaire ci-joint.",
+    "form": {
+      "name": "Nom",
+      "submit": "Envoyer",
+      "fill_inputs": "Merci de remplir tous les champs",
+      "invalid_email": "Merci de renseigner une adresse email valide"
+    }
+  },
+  "footer": {
+    "made": "Site réalisé avec",
+    "by": "par"
   }
 }
