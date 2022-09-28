@@ -46,27 +46,27 @@
       "strong2": "polyvalence"
     },
     "paragraph6": {
-      "part1": "À la prochaine ",
+      "part1": "To the next ",
       "part2": " !",
-      "strong1": "aventure"
+      "strong1": "adventure"
     }
   },
   "cv": {
-    "licence": "Permis B",
+    "licence": "Driving Licence",
     "experiences": {
-      "title": "Expériences",
-      "today": "Aujourd'hui",
+      "title": "Experiences",
+      "today": "Present",
       "diggers": {
-        "title": "Développeur Fullstack JS",
-        "description": "Développement agile sur React/Next/Adonis d'une solution e-commerce et outil interne à l'entreprise. Bugfix, intégration de fonctionnalités."
+        "title": "Fullstack JavaScript developer",
+        "description": "Fullstack missions on a React/Next/Adonis stack, both for the ecommerce solution and internal application for a vinyl distribution company. Bugfixes, feature integration."
       },
       "pimlicom": {
-        "title": "Chef de projet web | Pimlicom",
-        "description": "Gestion de projet web pour TPE & PME. Élaboration de CDC. Suivi technique de développement. Rédaction web. Positionnement et stratégie SEO. Recettage. Formations."
+        "title": "Digital project management",
+        "description": "Digital project management for small to medium sized companies.  Content writing, audits and expertise on SEO/WordPress."
       },
       "hypesoul": {
-        "title": "Rédacteur en chef | HypeSoul",
-        "description": "Rédacteur, développeur web et Community Manager au sein d'un média de culture urbaine. Administration du CMS Wordpress. Monitoring et reporting SEO & e-réputation"
+        "title": "Journalist, web developer",
+        "description": "Website management on WordPress, community management and interviews for a pure press Hip Hop media start up."
       }
     },
     "education": {
