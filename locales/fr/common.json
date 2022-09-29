@@ -6,6 +6,7 @@
   "error": "Erreur",
   "fullstack_dev": "développeur web fullstack JS",
   "introduction": {
+    "hello": "Hello !",
     "greetings": "Je m'appelle ",
     "iam": "Je suis ",
     "based_in": " basé à Paris."

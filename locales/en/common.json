@@ -6,6 +6,7 @@
   "error": "Error",
   "fullstack_dev": "JavaScript fullstack developer",
   "introduction": {
+    "hello": "Hello!",
     "greetings": "My name is ",
     "iam": "I am a ",
     "based_in": " based in Paris, France."
