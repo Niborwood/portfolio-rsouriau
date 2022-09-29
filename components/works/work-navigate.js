@@ -1,9 +1,11 @@
 import propTypes from "prop-types";
+import useTranslation from 'next-translate/useTranslation'
 
 // COMPONENT IMPORTS
 import Button from "../ui/button";
 
 export default function WorkNavigate({ slug }) {
+  const { t } = useTranslation('works')
   return (
     <div className="flex flex-col items-center justify-between gap-2 xs:flex-row">
       <Button
@@ -24,7 +26,7 @@ export default function WorkNavigate({ slug }) {
           </svg>
         }
       >
-        Retour
+        {t('back')}
       </Button>
       <Button
         href={slug}
@@ -44,7 +46,7 @@ export default function WorkNavigate({ slug }) {
           </svg>
         }
       >
-        Voir un autre projet
+        {t('see_another_project')}
       </Button>
     </div>
   );

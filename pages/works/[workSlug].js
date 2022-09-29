@@ -6,9 +6,11 @@ import WorkHead from "../../components/works/work-head";
 import WorkSidebar from "../../components/works/work-sidebar";
 import WorkContent from "../../components/works/work-content";
 import Error from "../../components/ui/error";
+import Loading from "../../components/ui/loading";
 
 export default function WorkPage({ work, nextWorkSlug, error }) {
   if (error) return <Error message={error} />;
+  if (!work) return <Loading />;
 
   return (
     <div className="py-8">
@@ -65,7 +67,7 @@ export async function getStaticPaths() {
 
   return {
     paths: worksPaths,
-    fallback: false,
+    fallback: true,
   };
 }
 

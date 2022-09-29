@@ -4,6 +4,6 @@ module.exports = {
   "defaultNS": "common",
   "pages": {
     "*": ["common"],
-    // "/works/*": ["works"]
+    "/works/[workSlug]": ["works"]
   }
 }

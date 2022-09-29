@@ -1,6 +1,7 @@
 import propTypes from "prop-types";
 import { Fragment } from "react";
 import ReactMarkdown from "react-markdown";
+import useTranslation from "next-translate/useTranslation";
 
 // COMPONENT IMPORTS
 import WorkImages from "./work-images";
@@ -8,10 +9,11 @@ import WorkNavigate from "./work-navigate";
 import Link from "../ui/link";
 
 export default function WorkContent({ context, work, images, nextWorkSlug }) {
+  const { t } = useTranslation("works");
   return (
     <div className="px-8 py-12 space-y-8 prose lg:p-24 sm:w-3/4 prose-slate prose-h3:text-3xl prose-h4:text-xl dark:prose-p:text-slate-400 dark:prose-h4:text-slate-300 dark:prose-strong:text-slate-200 dark:prose-h3:text-slate-200 dark:prose-li:text-slate-400 dark:prose-code:text-slate-200">
       <div>
-        <h3 className="mt-0">Contexte</h3>
+        <h3 className="mt-0">{t('context')}</h3>
         <ReactMarkdown
           components={{
             a: ({ children, href }) => (
@@ -31,7 +33,7 @@ export default function WorkContent({ context, work, images, nextWorkSlug }) {
       </div>
       <hr />
       <div>
-        <h3>Réalisation</h3>
+        <h3>{t('challenge')}</h3>
         <ReactMarkdown
           components={{
             a: ({ children, href }) => (
