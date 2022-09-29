@@ -51,11 +51,11 @@ export default function CVExperiences() {
       title: t('cv.education.licence.title'),
       description: t('cv.education.licence.description'),
     },
-    {
-      date: "2009 - 2010",
-      title: t('cv.education.bac.title'),
-      description: t('cv.education.bac.description'),
-    },
+    // {
+    //   date: "2009 - 2010",
+    //   title: t('cv.education.bac.title'),
+    //   description: t('cv.education.bac.description'),
+    // },
   ], [lang]) ;
 
   const experiencesList = experiences.map((experience) => (

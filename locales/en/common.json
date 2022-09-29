@@ -4,7 +4,7 @@
     "description": "React, NextJS, Node and Tailwind enthusiast. This is my personal portfolio and CV. Discover my works!"
   },
   "error": "Error",
-  "fullstack_dev": "JS fullstack developer",
+  "fullstack_dev": "JavaScript fullstack developer",
   "introduction": {
     "greetings": "My name is ",
     "iam": "I am a ",
@@ -33,17 +33,17 @@
       "part2": " because ever since I was a kid, I've always been fascinated by this form of communication, and by the links it can create between people, the communities it can build."
     },
     "paragraph4": {
-      "part1": "Récemment, je me suis pris au jeu de ",
-      "part2": ". Je tiens ici enfin le framework qui me dit que c'est le bon, celui où j'ai ce sentiment de \"m'amuser sérieusement\", à n'importe quelle échelle. Evidemment, il me reste à apprendre (je suppose qu'il me restera toujours à apprendre, et j'en fait même le voeu solennel), mais si un chemin se distingue des autres, c'est bien celui-ci. ",
-      "part3": " est également un péché mignon. Ce qui ne veut pas dire que côté back, je ne m'amuse pas avec les possibilités offertes par ",
-      "part4": ", de l'algorithmie et de la gestion de serveur."
+      "part1": "On a day to day basis, I work with ",
+      "part2": " and ",
+      "part3": " on the front-end, and ",
+      "part4": " on the back-end. In a small team of devs, we work with user stories and agile methodologies to deliver a product that meets the client's needs. In this case, the client might be both B2C (through our ecommerce solution) or B2B (through our production tracking solution). The app also serves as an internal tool across every branch of the company. The challenges comes in all forms, from bugfixes to new minor or major features, inherent to the will of growth of the company."
     },
     "paragraph5": {
-      "part1": "Pour autant, ces 10 années furent tout le contraire de perdues. J'y ai appris un sens du travail en ",
-      "part2": ", à petite et grande échelle, un goût prononcé pour la ",
-      "part3": " et l'adaptation et une envie de construire, toujours à plusieurs, des outils et des services utiles et performants.",
-      "strong1": "équipe",
-      "strong2": "polyvalence"
+      "part1": "With this working experience as a developer, I can both work on code and use my project management skills to help the team deliver the best product possible. I'm fond of working with diffent ",
+      "part2": ", both internal and external. I can deploy a taste for ",
+      "part3": " and adapting, always with this will to build great tools and services for all usages.",
+      "strong1": "teams",
+      "strong2": "multitasking"
     },
     "paragraph6": {
       "part1": "To the next ",
