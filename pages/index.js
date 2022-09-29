@@ -2,13 +2,13 @@ import Head from "next/head";
 import { Fragment } from "react";
 import { supabase } from "../utils/supabase-client";
 import useTranslation from "next-translate/useTranslation";
-import Trans from "next-translate/Trans";
 
 // COMPONENT IMPORTS
 import Introduction from "../components/introduction";
 import AboutMe from "../components/about-me";
 import Works from "../components/works";
 import CV from "../components/cv";
+import Error from "../components/ui/error";
 
 export default function Home({ works, tags, error, errorTags }) {
   const { t } = useTranslation("common");
@@ -42,9 +42,9 @@ export default function Home({ works, tags, error, errorTags }) {
 
       {/* Content */}
       <Introduction />
-      {error ? <p>{t("error")}</p> : <Works works={works} />}
+      {error ? <Error onlyMessage /> : <Works works={works} />}
       <AboutMe />
-      {errorTags ? <p>{t("error")}</p> : <CV tags={tags} />}
+      {errorTags ? <Error onlyMessage /> : <CV tags={tags} />}
     </Fragment>
   );
 }
@@ -56,6 +56,7 @@ export async function getStaticProps() {
       supabase
         .from("works")
         .select("id,title,description,thumbnail,slug,preview")
+        .order("position", { ascending: true })
         .order("id", { ascending: true }),
       supabase
         .from("tags")
