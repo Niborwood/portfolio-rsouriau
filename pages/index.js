@@ -55,7 +55,7 @@ export async function getStaticProps() {
     await Promise.all([
       supabase
         .from("works")
-        .select("id,title,description,thumbnail,slug,preview")
+        .select("id,title,description_en,description_fr,thumbnail,slug,preview")
         .order("position", { ascending: true })
         .order("id", { ascending: true }),
       supabase

@@ -1,35 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
-export default function Slide({
-  title,
-  description,
-  thumbnail,
-  slug,
-  preview,
-}) {
+export default function Slide(work) {
+  const { lang } = useTranslation();
   return (
     <div className="flex-grow-0 flex-shrink-0 w-full snap-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
       <div
         className={`relative rounded-lg w-full transition-all duration-300 border-l-8 ${
-          preview ? "border-slate-600" : "border-teal-600"
+          work.preview ? "border-slate-600" : "border-teal-600"
         } aspect-square hover:drop-shadow-lg`}
       >
-        {preview ? (
+        {work.preview ? (
           <Image
-            src={thumbnail}
-            alt={title}
-            title={title}
+            src={work.thumbnail}
+            alt={work.title}
+            title={work.title}
             layout="fill"
             className="block object-cover rounded-r-lg grayscale"
           />
         ) : (
-          <Link href={`/works/${slug}`} passHref>
+          <Link href={`/works/${work.slug}`} passHref>
             <a className="relative block w-full h-full">
               <Image
-                src={thumbnail}
-                alt={title}
-                title={title}
+                src={work.thumbnail}
+                alt={work.title}
+                title={work.title}
                 layout="fill"
                 className="block object-cover transition-all duration-300 rounded-r-lg grayscale hover:grayscale-0"
               />
@@ -39,12 +35,12 @@ export default function Slide({
       </div>
 
       <h3 className="mt-2 mb-1 text-2xl text-slate-600 dark:text-slate-300">
-        {preview ? (
-          title
+        {work.preview ? (
+          work.title
         ) : (
-          <Link href={`/works/${slug}`} passHref>
+          <Link href={`/works/${work.slug}`} passHref>
             <a className="inline-flex items-center gap-2 text-teal-600 capitalize hover:underline underline-offset-2">
-              {title}{" "}
+              {work.title}{" "}
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +61,9 @@ export default function Slide({
           </Link>
         )}
       </h3>
-      <div className="text-slate-600 dark:text-slate-300">{description}</div>
+      <div className="text-slate-600 dark:text-slate-300">
+        {work[`description_${lang}`]}
+      </div>
     </div>
   );
 }
