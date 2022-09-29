@@ -53,7 +53,7 @@ export default function AboutMe() {
           </p>
           <p>
             {t('about_me.paragraph4.part1')} <strong>React</strong>{t('about_me.paragraph4.part2')}<strong>NextJS</strong>{t('about_me.paragraph4.part3')}
-            <strong>Node</strong>{t('about_me.paragraph4.part4')}
+            <strong>Node / Adonis</strong>{t('about_me.paragraph4.part4')}
           </p>
           <p>
             {t('about_me.paragraph5.part1')}<strong>{t('about_me.paragraph5.strong1')}</strong>{t('about_me.paragraph5.part2')}

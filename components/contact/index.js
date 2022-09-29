@@ -25,10 +25,10 @@ export default function Contact() {
             className="space-y-4 text-right lg:w-2/3"
           >
             <h2 className="text-5xl lg:text-6xl dark:text-slate-200">
-              {t("contact:title")}
+              {t("contact.title")}
             </h2>
             <h3 className="text-lg lg:text-2xl dark:text-slate-300">
-              {t("contact:cta_text")}
+              {t("contact.cta_text")}
             </h3>
           </motion.div>
           <motion.div
