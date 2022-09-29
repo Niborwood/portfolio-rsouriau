@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import { supabase } from "../utils/supabase-client";
-import useTranslation from 'next-translate/useTranslation' 
-import Trans from 'next-translate/Trans'
+import useTranslation from "next-translate/useTranslation";
+import Trans from "next-translate/Trans";
 
 // COMPONENT IMPORTS
 import Introduction from "../components/introduction";
@@ -11,34 +11,20 @@ import Works from "../components/works";
 import CV from "../components/cv";
 
 export default function Home({ works, tags, error, errorTags }) {
-  const {t} = useTranslation('common');
-  
+  const { t } = useTranslation("common");
+
   return (
     <Fragment>
       {/* Head */}
       <Head>
-        <title>
-         { t('head.title') }
-        </title>
-        <meta
-          name="title"
-          content={t('head.title')}
-        />
-        <meta
-          name="description"
-          content={t('head.description')}
-        />
+        <title>{t("head.title")}</title>
+        <meta name="title" content={t("head.title")} />
+        <meta name="description" content={t("head.description")} />
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.robinsouriau.dev/" />
-        <meta
-          property="og:title"
-          content={t('head.title')}
-        />
-        <meta
-          property="og:description"
-          content={t('head.description')}
-        />
+        <meta property="og:title" content={t("head.title")} />
+        <meta property="og:description" content={t("head.description")} />
         <meta
           property="og:image"
           content="/images/cv/robin-souriau-developpeur-fullstack.jpg"
@@ -46,14 +32,8 @@ export default function Home({ works, tags, error, errorTags }) {
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.robinsouriau.dev/" />
-        <meta
-          property="twitter:title"
-          content={t('head.title')}
-        />
-        <meta
-          property="twitter:description"
-          content={t('head.description')}
-        />
+        <meta property="twitter:title" content={t("head.title")} />
+        <meta property="twitter:description" content={t("head.description")} />
         <meta
           property="twitter:image"
           content="/images/cv/robin-souriau-developpeur-fullstack.jpg"
@@ -62,25 +42,26 @@ export default function Home({ works, tags, error, errorTags }) {
 
       {/* Content */}
       <Introduction />
-      {error ? <p>{t('error')}</p> : <Works works={works} />}
+      {error ? <p>{t("error")}</p> : <Works works={works} />}
       <AboutMe />
-      {errorTags ? <p>{t('error')}</p> : <CV tags={tags} />}
+      {errorTags ? <p>{t("error")}</p> : <CV tags={tags} />}
     </Fragment>
   );
 }
 
 export async function getStaticProps() {
-  // Get works form slider display
-  const { data: works, error } = await supabase
-    .from("works")
-    .select("id,title,description,thumbnail,slug,preview")
-    .order("id", { ascending: true });
-
-  // Get tags for tag cloud display
-  const { data: tags, error: errorTags } = await supabase
-    .from("tags")
-    .select("id,name,favorite")
-    .order("name", { ascending: true });
+  // Get works form slider display & tags for skills
+  const [{ data: works, error }, { data: tags, error: errorTags }] =
+    await Promise.all([
+      supabase
+        .from("works")
+        .select("id,title,description,thumbnail,slug,preview")
+        .order("id", { ascending: true }),
+      supabase
+        .from("tags")
+        .select("id,name,favorite")
+        .order("name", { ascending: true }),
+    ]);
 
   // Return props
   return {
