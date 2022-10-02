@@ -1,5 +1,6 @@
 import { supabase } from "../../utils/supabase-client";
 import Head from "next/head";
+import useTranslation from "next-translate/useTranslation";
 
 // COMPONENT IMPORTS
 import WorkHead from "../../components/works/work-head";
@@ -9,6 +10,7 @@ import Error from "../../components/ui/error";
 import Loading from "../../components/ui/loading";
 
 export default function WorkPage({ work, nextWorkSlug, error }) {
+  const { lang } = useTranslation();
   if (error) return <Error message={error} />;
   if (!work) return <Loading />;
 
@@ -18,7 +20,7 @@ export default function WorkPage({ work, nextWorkSlug, error }) {
         <title>{work.title} - Portfolio | Robin Souriau</title>
         <meta
           name="description"
-          content={work.description_en.slice(0, 130) + "..."}
+          content={work[`descripton_${lang}`].slice(0, 130) + "..."}
         />
         <meta property="og:title" content={work.title} />
         <meta property="og:description" content={work.description} />
