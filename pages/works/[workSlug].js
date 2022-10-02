@@ -20,16 +20,16 @@ export default function WorkPage({ work, nextWorkSlug, error }) {
         <title>{work.title} - Portfolio | Robin Souriau</title>
         <meta
           name="description"
-          content={work[`descripton_${lang}`].slice(0, 130) + "..."}
+          content={work[`description_${lang}`].slice(0, 130) + "..."}
         />
         <meta property="og:title" content={work.title} />
-        <meta property="og:description" content={work[`descripton_${lang}`]} />
+        <meta property="og:description" content={work[`description_${lang}`]} />
         <meta property="og:image" content={work.image} />
       </Head>
 
       <WorkHead
         title={work.title}
-        description={work[`descripton_${lang}`]}
+        description={work[`description_${lang}`]}
         image={work.thumbnail}
       />
 
