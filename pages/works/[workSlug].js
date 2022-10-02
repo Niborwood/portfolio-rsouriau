@@ -23,13 +23,13 @@ export default function WorkPage({ work, nextWorkSlug, error }) {
           content={work[`descripton_${lang}`].slice(0, 130) + "..."}
         />
         <meta property="og:title" content={work.title} />
-        <meta property="og:description" content={work.description} />
+        <meta property="og:description" content={work[`descripton_${lang}`]} />
         <meta property="og:image" content={work.image} />
       </Head>
 
       <WorkHead
         title={work.title}
-        description={work.description}
+        description={work[`descripton_${lang}`]}
         image={work.thumbnail}
       />
 
