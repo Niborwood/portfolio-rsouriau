@@ -18,7 +18,7 @@ export default function WorkPage({ work, nextWorkSlug, error }) {
         <title>{work.title} - Portfolio | Robin Souriau</title>
         <meta
           name="description"
-          content={work.description.slice(0, 130) + "..."}
+          content={work.description_en.slice(0, 130) + "..."}
         />
         <meta property="og:title" content={work.title} />
         <meta property="og:description" content={work.description} />
