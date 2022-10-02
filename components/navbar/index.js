@@ -30,7 +30,7 @@ export default function NavBar({ isDark, handleDarkModeChange }) {
     () => [
       {
         href: "works",
-        name: "Works",
+        name: "Sides",
         svg: (
           <Fragment>
             <path
@@ -165,7 +165,7 @@ export default function NavBar({ isDark, handleDarkModeChange }) {
 
         {/* Language */}
         <button
-          onClick={async () => await setLanguage("en")}
+          onClick={async () => await setLanguage(lang === "en" ? "fr" : "en")}
           className="self-baseline hover:text-slate-200"
           aria-label="toggle dark mode"
         >

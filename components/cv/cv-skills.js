@@ -11,15 +11,15 @@ export default function CVSkills({ tags }) {
   const interests = useMemo(
     () => [
       {
-        name: t('cv.hobbies.roundnet'),
-        date: `${t('cv.hobbies.since')} 2020`,
+        name: t("cv.hobbies.roundnet"),
+        date: `${t("cv.hobbies.since")} 2020`,
       },
       {
-        name: t('cv.hobbies.podcast'),
+        name: t("cv.hobbies.podcast"),
         date: "2017 - 2020",
       },
       {
-        name: t('cv.hobbies.other'),
+        name: t("cv.hobbies.other"),
         date: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
