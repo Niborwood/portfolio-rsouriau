@@ -45,8 +45,8 @@ export default function WorkPage({ work, nextWorkSlug, error }) {
         <hr className="border-dashed sm:my-8 border-slate-300" />
 
         <WorkContent
-          context={work.context}
-          work={work.work}
+          context={work[`context_${lang}`]}
+          work={work[`work_${lang}`]}
           images={work.images}
           nextWorkSlug={nextWorkSlug}
         />
