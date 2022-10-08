@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import useTranslation from "next-translate/useTranslation";
 
 // COMPONENT IMPORTS
 import CVHead from "./cv-head";
@@ -7,6 +8,7 @@ import CVSkills from "./cv-skills";
 import SectionTitle from "../ui/section-title";
 
 export default function CV({ tags }) {
+  const { lang } = useTranslation();
   return (
     <motion.div
       initial="hidden"
@@ -32,7 +34,7 @@ export default function CV({ tags }) {
               d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
             />
           }
-          svgLink="/files/cv-souriau-robin-2022.pdf"
+          svgLink={`/files/cv-souriau-robin-2022-${lang}.pdf`}
         />
         <div></div>
       </div>
