@@ -20,4 +20,4 @@ C'est peu dire si je suis tombé amoureux de l'apport de TypeScript dans ce proj
 
 Tout est loin d'être parfait, et comme tout projet de découverte, beaucoup de conventions et de bonnes pratiques sont absentes, ou mal interprétées. Mais c'est, à mon sens, par là qu'il faut passer : produire du mauvais code, s'en rendre compte, apprendre de ses erreurs et garder le bon dans tout ça.
 
-Et l'appli, alors ? Rien de très compliqué dans l'absolu.
+Et l'appli, alors ? Rien de très compliqué dans l'absolu. Quelques questions et une UI la plus ludique possible. J'ai quand même exploré les fonctions SQL de Supabase pour créer un ersatz d'administration sans avoir à développer un serveur dédié. Pas ma solution préférée si c'était à refaire, mais nous sommes là pour essayer, n'est-ce pas ?
